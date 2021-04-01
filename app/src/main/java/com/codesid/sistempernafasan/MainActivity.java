@@ -2,6 +2,7 @@ package com.codesid.sistempernafasan;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.AnimationUtils;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 view.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.image_click));
+                Intent intent = new Intent(MainActivity.this,MainMenu.class);
+                startActivity(intent);
 
             }
         });

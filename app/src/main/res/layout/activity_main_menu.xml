@@ -14,7 +14,7 @@
         android:layout_marginTop="@dimen/_10sdp"
         android:src="@drawable/home_judul"
         app:layout_constraintEnd_toStartOf="@+id/imageView10"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/img_btn_petunjuk"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,7 +23,7 @@
         android:layout_height="@dimen/_200sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintStart_toEndOf="@+id/imageView6">
+        app:layout_constraintStart_toEndOf="@+id/img_btn_petunjuk">
 
         <ImageView
             android:id="@+id/imageView4"
@@ -72,7 +72,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/img_btn_petunjuk"
         android:layout_width="@dimen/_43sdp"
         android:layout_height="@dimen/_48sdp"
         android:layout_marginStart="24dp"
@@ -83,30 +83,30 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/img_btn_profile"
         android:layout_width="@dimen/_43sdp"
         android:layout_height="@dimen/_48sdp"
         android:src="@drawable/home_btnprofile"
-        app:layout_constraintStart_toStartOf="@+id/imageView6"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6"
+        app:layout_constraintStart_toStartOf="@+id/img_btn_petunjuk"
+        app:layout_constraintTop_toBottomOf="@+id/img_btn_petunjuk"
         android:layout_marginTop="@dimen/_3sdp"/>
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/img_btn_info"
         android:layout_width="@dimen/_43sdp"
         android:layout_height="@dimen/_48sdp"
         android:src="@drawable/home_btntujuan"
-        app:layout_constraintStart_toStartOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="@+id/img_btn_profile"
+        app:layout_constraintTop_toBottomOf="@+id/img_btn_profile"
         android:layout_marginTop="@dimen/_3sdp"/>
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/img_btn_exit"
         android:layout_width="@dimen/_43sdp"
         android:layout_height="@dimen/_48sdp"
         android:src="@drawable/home_btnclose"
-        app:layout_constraintStart_toStartOf="@+id/imageView8"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
+        app:layout_constraintStart_toStartOf="@+id/img_btn_info"
+        app:layout_constraintTop_toBottomOf="@+id/img_btn_info"
         android:layout_marginTop="@dimen/_3sdp" />
 
 
