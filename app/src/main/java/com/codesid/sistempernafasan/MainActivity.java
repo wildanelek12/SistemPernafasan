@@ -3,8 +3,10 @@ package com.codesid.sistempernafasan;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
@@ -25,13 +27,27 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         imgBtnSoundOff.setVisibility(View.INVISIBLE);
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.opening);
+        mp.start();
+        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                mp.start();
+            }
+        });
+
+
 
         ImageView imgbtnStart = findViewById(R.id.imgBtn_start);
+
+        Animation connectingAnimation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.alpha_scale_animation);
+        imgbtnStart.startAnimation(connectingAnimation);
         imgbtnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 view.startAnimation(AnimationUtils.loadAnimation(MainActivity.this, R.anim.image_click));
                 Intent intent = new Intent(MainActivity.this,MainMenu.class);
+                mp.release();
                 startActivity(intent);
 
             }
@@ -42,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 imgBtnSoundOn.setVisibility(View.INVISIBLE);
                 imgBtnSoundOff.setVisibility(View.VISIBLE);
+                mp.setVolume(0,0);
             }
         });
 
@@ -50,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 imgBtnSoundOn.setVisibility(View.VISIBLE);
                 imgBtnSoundOff.setVisibility(View.INVISIBLE);
+                mp.setVolume(1,1);
+
             }
         });
 

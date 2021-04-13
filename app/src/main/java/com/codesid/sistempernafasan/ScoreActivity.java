@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class ScoreActivity extends AppCompatActivity {
 
@@ -16,10 +17,10 @@ public class ScoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_score);
 
-        Bundle extras = getIntent().getExtras();
+        ButterKnife.bind(this);
 
-        if (extras != null) {
-            txt_score.setText(extras.getInt("score"));
-        }
+
+        txt_score.setText(String.valueOf(getIntent().getIntExtra("score", 0)) );
+
     }
 }

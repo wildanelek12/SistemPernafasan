@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Sistem Pernafasan</string>
+
+    <string-array name="organ_values">
+        <item></item>
+        <item>Hidung</item>
+        <item>Paru-Paru</item>
+        <item>Faring</item>
+        <item>Alveolus</item>
+        <item>Bronkus</item>
+        <item>Laring</item>
+        <item>Bronkiolus</item>
+        <item>Trakea</item>
+
+    </string-array>
 </resources>

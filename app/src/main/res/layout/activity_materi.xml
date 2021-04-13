@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MateriActivity"
+    android:background="@drawable/frame_materi">
+
+    <ImageView
+        android:id="@+id/btn_materi_pernapasan"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/btn_materi1"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_materi_organ"
+        app:layout_constraintEnd_toStartOf="@+id/btn_materi_organ"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_materi_organ" />
+
+    <ImageView
+        android:id="@+id/btn_materi_organ"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_75sdp"
+        android:src="@drawable/btn_materi2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_materi_mekanisme"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/btn_materi3"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_materi_organ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_materi_organ"
+        app:layout_constraintTop_toTopOf="@+id/btn_materi_organ" />
+
+    <ImageView
+        android:id="@+id/btn_materi_frekuensi"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/btn_materi4"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_materi_volume"
+        app:layout_constraintEnd_toEndOf="@+id/btn_materi_pernapasan"
+        app:layout_constraintStart_toStartOf="@+id/btn_materi_pernapasan"
+        app:layout_constraintTop_toTopOf="@+id/btn_materi_volume" />
+
+    <ImageView
+        android:layout_marginTop="@dimen/_20sdp"
+        android:id="@+id/btn_materi_volume"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/btn_materi5"
+        app:layout_constraintEnd_toEndOf="@+id/btn_materi_organ"
+        app:layout_constraintStart_toStartOf="@+id/btn_materi_organ"
+        app:layout_constraintTop_toBottomOf="@+id/btn_materi_organ" />
+
+    <ImageView
+        android:id="@+id/btn_materi_gangguan"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:src="@drawable/btn_materi6"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_materi_volume"
+        app:layout_constraintEnd_toEndOf="@+id/btn_materi_mekanisme"
+        app:layout_constraintStart_toStartOf="@+id/btn_materi_mekanisme"
+        app:layout_constraintTop_toTopOf="@+id/btn_materi_volume" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
