@@ -36,15 +36,16 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:id="@+id/btnMenuMateri"
             android:layout_width="@dimen/_75sdp"
             android:layout_height="@dimen/_75sdp"
             android:layout_marginTop="@dimen/_30sdp"
             android:src="@drawable/home_btnmateri"
-            app:layout_constraintEnd_toStartOf="@+id/imageView5"
-            app:layout_constraintTop_toTopOf="@+id/imageView5" />
+            app:layout_constraintEnd_toStartOf="@+id/btnMenuVideo"
+            app:layout_constraintTop_toTopOf="@+id/btnMenuVideo" />
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/btnMenuVideo"
             android:layout_width="@dimen/_75sdp"
             android:layout_height="@dimen/_75sdp"
             android:layout_marginBottom="@dimen/_75sdp"
@@ -55,12 +56,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
+            android:id="@+id/btnMenuLatihan"
             android:layout_width="@dimen/_75sdp"
             android:layout_height="@dimen/_75sdp"
             android:layout_marginTop="@dimen/_30sdp"
             android:src="@drawable/home_btnlatihan"
-            app:layout_constraintStart_toEndOf="@+id/imageView5"
-            app:layout_constraintTop_toTopOf="@+id/imageView5" />
+            app:layout_constraintStart_toEndOf="@+id/btnMenuVideo"
+            app:layout_constraintTop_toTopOf="@+id/btnMenuVideo" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView

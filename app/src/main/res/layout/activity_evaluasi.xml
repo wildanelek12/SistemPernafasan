@@ -16,6 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
+        android:id="@+id/btnStartEvaluasi"
         android:layout_width="@dimen/_130sdp"
         android:layout_height="@dimen/_137sdp"
         android:src="@drawable/btnstart"

@@ -3,6 +3,7 @@
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
@@ -30,6 +31,13 @@ import butterknife.ButterKnife;
      ImageView img_btn_info;
      @BindView(R.id.img_btn_exit)
      ImageView img_btn_exit;
+        @BindView(R.id.btnMenuLatihan)
+        ImageView btnMenuLatihan;
+        @BindView(R.id.btnMenuMateri)
+        ImageView btnMenuMateri;
+        @BindView(R.id.btnMenuVideo)
+        ImageView btnMenuVideo;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +58,34 @@ import butterknife.ButterKnife;
 
         Animation connectingAnimation = AnimationUtils.loadAnimation(MainMenu.this, R.anim.alpha_scale_animation);
         img_btn_petunjuk.startAnimation(connectingAnimation);
+
+        btnMenuLatihan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMenu.this,ActivityLatihan.class);
+                startActivity(intent);
+                mp.release();
+
+            }
+        });
+        btnMenuMateri.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMenu.this,MateriActivity.class);
+                startActivity(intent);
+                mp.release();
+
+            }
+        });
+        btnMenuVideo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainMenu.this,VideoActivity.class);
+                startActivity(intent);
+                mp.release();
+
+            }
+        });
 
         img_btn_petunjuk.setOnClickListener(new View.OnClickListener() {
             @Override
