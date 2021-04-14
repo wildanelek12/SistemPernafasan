@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VolumeActivity"
+    android:background="@drawable/frame_materi2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comforta_bold"
+            android:text="Volume Pernapasan"
+            android:textSize="@dimen/_18ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_223sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:layout_editor_absoluteX="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btnumur"
+                android:layout_width="@dimen/_105sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/border_organ"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/imageView7">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comforta_bold"
+                    android:text="Volume Tidal"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btnjeniskelamin"
+                android:layout_width="@dimen/_105sdp"
+                android:layout_height="@dimen/_41sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/border_organ"
+                app:layout_constraintEnd_toEndOf="@+id/btnumur"
+                app:layout_constraintStart_toStartOf="@+id/btnumur"
+                app:layout_constraintTop_toBottomOf="@+id/btnumur">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comforta_bold"
+                    android:text="Volume Cadangan Ekspirasi (Suplementer)"
+                    android:textSize="@dimen/_10ssp"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btnsuhu"
+                android:layout_width="@dimen/_105sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/border_organ"
+                app:layout_constraintEnd_toEndOf="@+id/btnumur"
+                app:layout_constraintStart_toStartOf="@+id/btnumur"
+                app:layout_constraintTop_toBottomOf="@+id/btnjeniskelamin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comforta_bold"
+                    android:textAlignment="center"
+                    android:text="Volume Cadangan  i (Komplementer)"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btnposisi"
+                android:layout_width="@dimen/_105sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/border_organ"
+                app:layout_constraintEnd_toEndOf="@+id/btnumur"
+                app:layout_constraintStart_toStartOf="@+id/btnumur"
+                app:layout_constraintTop_toBottomOf="@+id/btnsuhu">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comforta_bold"
+                    android:text="Volume Residu"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btnvitalparu"
+                android:layout_width="@dimen/_105sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/border_organ"
+                app:layout_constraintEnd_toEndOf="@+id/btnumur"
+                app:layout_constraintStart_toStartOf="@+id/btnumur"
+                app:layout_constraintTop_toBottomOf="@+id/btnposisi">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comforta_bold"
+                    android:text="Kapasitas Vital Paru-Paru"
+                    android:textSize="@dimen/_11ssp"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.454" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/btntotalparu"
+                android:layout_width="@dimen/_105sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/border_organ"
+                app:layout_constraintEnd_toEndOf="@+id/btnumur"
+                app:layout_constraintStart_toStartOf="@+id/btnumur"
+                app:layout_constraintTop_toBottomOf="@+id/btnvitalparu">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/comforta_bold"
+                    android:text="Kapasitas Total Paru-Paru"
+                    android:textSize="@dimen/_11ssp"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.454" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/_375sdp"
+            android:layout_height="@dimen/_223sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="aksjdhakjsdhkajasdasdasdasddsh"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

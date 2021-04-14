@@ -11,25 +11,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SistemPernafasan"
         tools:replace="icon">
-        <activity android:name=".ActivityOrgan"
-            android:screenOrientation="landscape">
-
-
-        </activity>
-        <activity android:name=".MateriActivity"
-            android:screenOrientation="landscape">
-
-
-        </activity>
+        <activity android:name=".SistemPernapasanActivity"></activity>
+        <activity android:name=".VolumeActivity" />
+        <activity android:name=".FrekuensiActivity" />
+        <activity android:name=".frekuensi" />
+        <activity
+            android:name=".ActivityOrgan"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MateriActivity"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ScoreActivity"
             android:screenOrientation="landscape" />
         <activity android:name=".VideoActivity" />
         <activity
             android:name=".ActivityEvaluasiSoal"
-            android:screenOrientation="landscape">
-
-        </activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".EvaluasiActivity"
             android:screenOrientation="landscape" />
@@ -41,7 +39,7 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
