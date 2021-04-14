@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.BindView;
@@ -38,6 +39,24 @@ public class ActivityOrgan extends AppCompatActivity {
     ConstraintLayout btnTrakea;
     @BindView(R.id.btnParu)
     ConstraintLayout btnParu;
+    @BindView(R.id.txtHidung)
+    TextView txtHidung;
+    @BindView(R.id.txtBronkus)
+    TextView txtBronkus;
+    @BindView(R.id.txtBronkiolus)
+    TextView txtBronkiolus;
+    @BindView(R.id.txtAlveolus)
+    TextView txtAlveolus;
+    @BindView(R.id.txtFaring)
+    TextView txtFaring;
+    @BindView(R.id.txtLaring)
+    TextView txtLaring;
+    @BindView(R.id.txtTrakea)
+    TextView txtTrakea;
+    @BindView(R.id.txtParu)
+    TextView txtParu;
+    
+
 
     int skor = 0;
 
@@ -55,50 +74,54 @@ public class ActivityOrgan extends AppCompatActivity {
         btnHidung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog("Hidung",btnHidung,0);
+                if (txtHidung.getText().equals("Hidung")){
+                    Toast.makeText(ActivityOrgan.this, "Masuk Materi", Toast.LENGTH_SHORT).show();
+                }else {
+                    showDialog("Hidung", btnHidung, 0, txtHidung);
+                }
             }
         });
         btnBronkus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog("Bronkus",btnBronkus,1);
+                showDialog("Bronkus",btnBronkus,1,txtBronkus);
             }
         });
         btnBronkiolus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog("Bronkiolus",btnBronkiolus,2);
+                showDialog("Bronkiolus",btnBronkiolus,2,txtBronkiolus);
             }
         });
 
         btnAlveolus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog("Alveolus",btnAlveolus,3);
+                showDialog("Alveolus",btnAlveolus,3,txtAlveolus);
             }
         });
         btnFaring.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog("Faring",btnFaring,4);
+                showDialog("Faring",btnFaring,4,txtFaring);
             }
         });
         btnLaring.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog("Laring",btnLaring,5);
+                showDialog("Laring",btnLaring,5,txtLaring);
             }
         });
         btnTrakea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog("Trakea",btnTrakea,6);
+                showDialog("Trakea",btnTrakea,6,txtTrakea);
             }
         });
         btnParu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog("Paru-Paru",btnParu,7);
+                showDialog("Paru-Paru",btnParu,7,txtParu);
             }
         });
 
@@ -110,7 +133,7 @@ public class ActivityOrgan extends AppCompatActivity {
     }
 
 
-    public void showDialog(String value,ConstraintLayout cl,int index){
+    public void showDialog(String value, ConstraintLayout cl, int index, TextView textView){
         Dialog alertDialog = new Dialog(ActivityOrgan.this);
         alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         alertDialog.setContentView(R.layout.dialog_materi);
@@ -129,21 +152,20 @@ public class ActivityOrgan extends AppCompatActivity {
                 if (spinner.getSelectedItem().equals(organ[index])){
                     cl.setBackgroundResource(R.drawable.border_organ_true);
                     alertDialog.dismiss();
-                    cl.setEnabled(false);
+                    textView.setText(organ[index]);
                     skor+=10;
+                    
                 }else{
                     cl.setBackgroundResource(R.drawable.border_organ_false);
                     alertDialog.dismiss();
                 }
 
-                if (skor==80){
-//                    Toast.makeText(ActivityOrgan.this, "Sudah Selesai Semua", Toast.LENGTH_SHORT).show();
-
-                }
 
 
             }
         });
+
+
 
 
 

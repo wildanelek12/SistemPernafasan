@@ -7,13 +7,17 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SistemPernafasan"
         tools:replace="icon">
-        <activity android:name=".SistemPernapasanActivity"></activity>
-        <activity android:name=".VolumeActivity" />
-        <activity android:name=".FrekuensiActivity" />
+        <activity android:name=".SistemPernapasanActivity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".VolumeActivity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".FrekuensiActivity"
+            android:screenOrientation="landscape"/>
         <activity android:name=".frekuensi" />
         <activity
             android:name=".ActivityOrgan"
@@ -24,7 +28,8 @@
         <activity
             android:name=".ScoreActivity"
             android:screenOrientation="landscape" />
-        <activity android:name=".VideoActivity" />
+        <activity android:name=".VideoActivity"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".ActivityEvaluasiSoal"
             android:screenOrientation="landscape" />

@@ -54,9 +54,10 @@
             app:layout_constraintTop_toTopOf="@+id/imageView7" >
 
             <TextView
+                android:id="@+id/txtHidung"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hidung"
+                android:text="?"
 
                 android:fontFamily="@font/comforta_bold"
                 android:textSize="@dimen/_14ssp"
@@ -79,7 +80,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bronkus"
+                android:id="@+id/txtBronkus"
+                android:text="?"
                 android:fontFamily="@font/comforta_bold"
                 android:textSize="@dimen/_14ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -98,9 +100,10 @@
             app:layout_constraintStart_toStartOf="@+id/btnBronkus"
             app:layout_constraintTop_toBottomOf="@+id/btnBronkus" >
             <TextView
+                android:id="@+id/txtBronkiolus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bronkiolus"
+                android:text="?"
                 android:fontFamily="@font/comforta_bold"
                 android:textSize="@dimen/_14ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -120,9 +123,10 @@
             app:layout_constraintStart_toStartOf="@+id/btnBronkiolus"
             app:layout_constraintTop_toBottomOf="@+id/btnBronkiolus" >
             <TextView
+                android:id="@+id/txtAlveolus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alveolus"
+                android:text="?"
                 android:fontFamily="@font/comforta_bold"
                 android:textSize="@dimen/_14ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -142,9 +146,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/btnHidung" >
             <TextView
+                android:id="@+id/txtFaring"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Faring"
+                android:text="?"
                 android:fontFamily="@font/comforta_bold"
                 android:textSize="@dimen/_14ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -163,9 +168,10 @@
             app:layout_constraintStart_toStartOf="@+id/btnFaring"
             app:layout_constraintTop_toBottomOf="@+id/btnFaring" >
             <TextView
+                android:id="@+id/txtLaring"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Laring"
+                android:text="?"
                 android:fontFamily="@font/comforta_bold"
                 android:textSize="@dimen/_14ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -183,11 +189,13 @@
             app:layout_constraintEnd_toEndOf="@+id/btnLaring"
             app:layout_constraintStart_toStartOf="@+id/btnLaring"
             app:layout_constraintTop_toBottomOf="@+id/btnLaring" >
+
             <TextView
+                android:id="@+id/txtTrakea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Trakea"
                 android:fontFamily="@font/comforta_bold"
+                android:text="?"
                 android:textSize="@dimen/_14ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -196,6 +204,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+
             android:id="@+id/btnParu"
             android:layout_width="@dimen/_100sdp"
             android:layout_marginTop="@dimen/_10sdp"
@@ -205,9 +214,10 @@
             app:layout_constraintStart_toStartOf="@+id/btnTrakea"
             app:layout_constraintTop_toBottomOf="@+id/btnTrakea" >
             <TextView
+                android:id="@+id/txtParu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Paru-Paru"
+                android:text="?"
                 android:fontFamily="@font/comforta_bold"
                 android:textSize="@dimen/_14ssp"
                 app:layout_constraintBottom_toBottomOf="parent"

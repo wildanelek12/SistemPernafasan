@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".SistemPernapasanActivity">
 
+
+    <ImageView
+        android:layout_width="@dimen/_400sdp"
+        android:layout_height="@dimen/_300sdp"
+        android:id="@+id/imgGif"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
