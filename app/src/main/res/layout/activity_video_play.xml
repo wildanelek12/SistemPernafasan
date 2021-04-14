@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ScoreActivity"
-    android:background="@drawable/score">
+    tools:context=".VideoPlayActivity"
+    android:background="@drawable/frame_materi2">
 
 
     <ImageView
@@ -17,19 +17,25 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/btn_back"/>
 
-    <TextView
-        android:id="@+id/txt_score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="100"
-        android:textColor="#809BCE"
-        android:fontFamily="@font/honeybear"
-        android:layout_marginRight="@dimen/_20sdp"
-        android:textSize="@dimen/_48ssp"
-        android:layout_marginTop="@dimen/_35sdp"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="@dimen/_475sdp"
+        android:layout_height="@dimen/_275sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

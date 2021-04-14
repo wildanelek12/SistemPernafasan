@@ -8,6 +8,14 @@
     android:background="@drawable/frame_materi2">
 
 
+    <ImageView
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/btn_back"/>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
