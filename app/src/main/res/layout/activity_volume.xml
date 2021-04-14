@@ -38,7 +38,7 @@
             tools:layout_editor_absoluteX="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnumur"
+                android:id="@+id/btnVolumeTidal"
                 android:layout_width="@dimen/_105sdp"
                 android:layout_height="@dimen/_28sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
@@ -61,16 +61,17 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnjeniskelamin"
+                android:id="@+id/btnVolumeCadanganEkspirasi"
                 android:layout_width="@dimen/_105sdp"
                 android:layout_height="@dimen/_41sdp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:background="@drawable/border_organ"
-                app:layout_constraintEnd_toEndOf="@+id/btnumur"
-                app:layout_constraintStart_toStartOf="@+id/btnumur"
-                app:layout_constraintTop_toBottomOf="@+id/btnumur">
+                app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
+                app:layout_constraintStart_toStartOf="@+id/btnVolumeTidal"
+                app:layout_constraintTop_toBottomOf="@+id/btnVolumeTidal">
 
                 <TextView
+                    
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/comforta_bold"
@@ -86,14 +87,14 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnsuhu"
+                android:id="@+id/btnVolumeCadanganKomplementer"
                 android:layout_width="@dimen/_105sdp"
                 android:layout_height="@dimen/_30sdp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:background="@drawable/border_organ"
-                app:layout_constraintEnd_toEndOf="@+id/btnumur"
-                app:layout_constraintStart_toStartOf="@+id/btnumur"
-                app:layout_constraintTop_toBottomOf="@+id/btnjeniskelamin">
+                app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
+                app:layout_constraintStart_toStartOf="@+id/btnVolumeTidal"
+                app:layout_constraintTop_toBottomOf="@+id/btnVolumeCadanganEkspirasi">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -111,14 +112,14 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnposisi"
+                android:id="@+id/btnVolumeResidu"
                 android:layout_width="@dimen/_105sdp"
                 android:layout_height="@dimen/_28sdp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:background="@drawable/border_organ"
-                app:layout_constraintEnd_toEndOf="@+id/btnumur"
-                app:layout_constraintStart_toStartOf="@+id/btnumur"
-                app:layout_constraintTop_toBottomOf="@+id/btnsuhu">
+                app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
+                app:layout_constraintStart_toStartOf="@+id/btnVolumeTidal"
+                app:layout_constraintTop_toBottomOf="@+id/btnVolumeCadanganKomplementer">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -135,14 +136,14 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnvitalparu"
+                android:id="@+id/btnVitalParu"
                 android:layout_width="@dimen/_105sdp"
                 android:layout_height="@dimen/_32sdp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:background="@drawable/border_organ"
-                app:layout_constraintEnd_toEndOf="@+id/btnumur"
-                app:layout_constraintStart_toStartOf="@+id/btnumur"
-                app:layout_constraintTop_toBottomOf="@+id/btnposisi">
+                app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
+                app:layout_constraintStart_toStartOf="@+id/btnVolumeTidal"
+                app:layout_constraintTop_toBottomOf="@+id/btnVolumeResidu">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -162,14 +163,14 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btntotalparu"
+                android:id="@+id/btnKapasitasTotal"
                 android:layout_width="@dimen/_105sdp"
                 android:layout_height="@dimen/_32sdp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:background="@drawable/border_organ"
-                app:layout_constraintEnd_toEndOf="@+id/btnumur"
-                app:layout_constraintStart_toStartOf="@+id/btnumur"
-                app:layout_constraintTop_toBottomOf="@+id/btnvitalparu">
+                app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
+                app:layout_constraintStart_toStartOf="@+id/btnVolumeTidal"
+                app:layout_constraintTop_toBottomOf="@+id/btnVitalParu">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -193,17 +194,24 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="@dimen/_375sdp"
             android:layout_height="@dimen/_223sdp"
+            android:background="@drawable/border_organ"
             app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
             app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
 
             <TextView
+
+                android:id="@+id/txtVolumePernapasan"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="aksjdhakjsdhkajasdasdasdasddsh"
-                android:textAlignment="center"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="0dp" />
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="@dimen/_6sdp"
+                android:layout_marginHorizontal="@dimen/_20sdp"
+                android:text="aksjdhakjsdhkajasdasdasdasddshasddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
