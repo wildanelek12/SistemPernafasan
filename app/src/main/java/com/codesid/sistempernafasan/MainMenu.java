@@ -58,6 +58,14 @@ import butterknife.ButterKnife;
 
         Animation connectingAnimation = AnimationUtils.loadAnimation(MainMenu.this, R.anim.alpha_scale_animation);
         img_btn_petunjuk.startAnimation(connectingAnimation);
+        img_btn_exit.startAnimation(connectingAnimation);
+        img_btn_info.startAnimation(connectingAnimation);
+        img_btn_profile.startAnimation(connectingAnimation);
+        btnMenuMateri.startAnimation(connectingAnimation);
+        btnMenuVideo.startAnimation(connectingAnimation);
+        btnMenuLatihan.startAnimation(connectingAnimation);
+
+
 
         btnMenuLatihan.setOnClickListener(new View.OnClickListener() {
             @Override

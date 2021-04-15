@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.codesid.sistempernafasan">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SistemPernafasan"
         tools:replace="icon">
-        <activity android:name=".VideoPlayActivity"></activity>
+        <activity android:name=".VideoPlayActivity"
+            android:screenOrientation="landscape"></activity>
         <activity
             android:name=".SistemPernapasanActivity"
             android:screenOrientation="landscape" />

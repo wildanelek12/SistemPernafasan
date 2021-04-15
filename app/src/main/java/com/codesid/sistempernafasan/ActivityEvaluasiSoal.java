@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -24,6 +26,8 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
     TextView txt_answer_c;
     @BindView(R.id.txt_answer_d)
     TextView txt_answer_d;
+    @BindView(R.id.btnBackEvaluasiSoal)
+    ImageView btnBackEvaluasiSoal;
 
     int index = 0;
     int score =0;
@@ -106,6 +110,13 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
 
 
             _setQuestion();
+            btnBackEvaluasiSoal.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    finish();
+                }
+            });
+
 
     }
 

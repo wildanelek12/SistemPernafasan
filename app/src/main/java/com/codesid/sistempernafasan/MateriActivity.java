@@ -48,7 +48,7 @@ public class MateriActivity extends AppCompatActivity {
         btn_materi_frekuensi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MateriActivity.this,VolumeActivity.class);
+                Intent intent = new Intent(MateriActivity.this,FrekuensiActivity.class);
                 startActivity(intent);
             }
         });
