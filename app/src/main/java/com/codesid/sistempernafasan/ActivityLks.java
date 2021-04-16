@@ -25,6 +25,8 @@ public class ActivityLks extends AppCompatActivity {
 
     @BindView(R.id.btnHidung)
     ConstraintLayout btnHidung;
+    @BindView(R.id.btnBackLKS)
+    ImageView btnBackLks;
     @BindView(R.id.btnBronkus)
     ConstraintLayout btnBronkus;
     @BindView(R.id.btnBronkiolus)
@@ -124,6 +126,13 @@ public class ActivityLks extends AppCompatActivity {
                 showDialog("Paru-Paru",btnParu,7,txtParu);
             }
         });
+        btnBackLks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
 
 
 

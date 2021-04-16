@@ -11,6 +11,7 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 public class GangguanActivity extends AppCompatActivity {
 
@@ -22,8 +23,13 @@ public class GangguanActivity extends AppCompatActivity {
     ImageView imgGangguan;
     @BindView(R.id.txtJudulGangguan)
     TextView judulGangguan;
+    @BindView(R.id.btnNextPageGangguan)
+    ImageView btnNextPageGangguan;
+    @BindView(R.id.btnPreviousPageGangguan)
+    ImageView btnPreviousPageGangguan;
 
-    String penjelasanOrgan[]={
+
+    String penjelasanGangguan[]={
             "Penyakit yang disebabkan oleh infeksi Influenza virus. Gejala umum influenza yaitu, demam dengan suhu lebih dari 39o C, pilek, bersin-bersin, batuk, sakit kepala, sakit otot, dan rongga hidung terasa gatal. Dengan kondisi hidung tersumbat, penderita influenza akan kesulitan untuk bernapas. \n" +
                     "\n" +
                     "Agar kamu tidak mudah tertular virus influenza, sebaiknya kamu selalu menggunakan masker ketika berkendaraan dan rajin mencuci tangan dengan menggunakan sabun sebelum makan.\n",
@@ -52,13 +58,15 @@ public class GangguanActivity extends AppCompatActivity {
     };
 
 
-    String judulOrgan []={
-            "Influenza  ","Tonsilitis","Faringitis","Pneumonia","Tuberculosis","Asma","Kanker Paru-Paru"
+    String namaGangguan []={
+            "Influenza","Tonsilitis","Faringitis","Pneumonia","Tuberculosis","Asma","Kanker Paru-Paru"
     };
 
-    int gambarOrgan [] ={
+    int gambarGangguan [] ={
             R.drawable.gangguan1,R.drawable.gangguan2,R.drawable.gangguan3,R.drawable.gangguan4,R.drawable.gangguan5,R.drawable.gangguan6,R.drawable.gangguan7
     };
+
+    int index=0;
 
 
     @Override
@@ -66,11 +74,77 @@ public class GangguanActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gangguan);
 
+        ButterKnife.bind(this);
+        txtGangguan.setText(penjelasanGangguan[index]);
+        judulGangguan.setText(namaGangguan[index]);
+        imgGangguan.setImageResource(gambarGangguan[index]);
+        btnPreviousPageGangguan.setVisibility(View.INVISIBLE);
+
         btnBackGangguan.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 finish();
             }
         });
+        btnPreviousPageGangguan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                index--;
+
+                if (index==6){
+                    btnNextPageGangguan.setVisibility(View.INVISIBLE);
+                    btnPreviousPageGangguan.setVisibility(View.VISIBLE);
+                    txtGangguan.setText(penjelasanGangguan[index]);
+                    judulGangguan.setText(namaGangguan[index]);
+                    imgGangguan.setImageResource(gambarGangguan[index]);
+                }else if (index==0){
+                    btnNextPageGangguan.setVisibility(View.VISIBLE);
+                    btnPreviousPageGangguan.setVisibility(View.INVISIBLE);
+                    txtGangguan.setText(penjelasanGangguan[index]);
+                    judulGangguan.setText(namaGangguan[index]);
+                    imgGangguan.setImageResource(gambarGangguan[index]);
+                }else {
+                    btnNextPageGangguan.setVisibility(View.VISIBLE);
+                    btnPreviousPageGangguan.setVisibility(View.VISIBLE);
+                    txtGangguan.setText(penjelasanGangguan[index]);
+                    judulGangguan.setText(namaGangguan[index]);
+                    imgGangguan.setImageResource(gambarGangguan[index]);
+                }
+
+
+            }
+        });
+
+
+
+        btnNextPageGangguan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                index++;
+
+                if (index==6){
+                    btnNextPageGangguan.setVisibility(View.INVISIBLE);
+                    btnPreviousPageGangguan.setVisibility(View.VISIBLE);
+                    txtGangguan.setText(penjelasanGangguan[index]);
+                    judulGangguan.setText(namaGangguan[index]);
+                    imgGangguan.setImageResource(gambarGangguan[index]);
+                }else if (index==0){
+                    btnNextPageGangguan.setVisibility(View.VISIBLE);
+                    btnPreviousPageGangguan.setVisibility(View.INVISIBLE);
+                    txtGangguan.setText(penjelasanGangguan[index]);
+                    judulGangguan.setText(namaGangguan[index]);
+                    imgGangguan.setImageResource(gambarGangguan[index]);
+                }else {
+                    btnNextPageGangguan.setVisibility(View.VISIBLE);
+                    btnPreviousPageGangguan.setVisibility(View.VISIBLE);
+                    txtGangguan.setText(penjelasanGangguan[index]);
+                    judulGangguan.setText(namaGangguan[index]);
+                    imgGangguan.setImageResource(gambarGangguan[index]);
+                }
+
+            }
+        });
+
+
     }
 }

@@ -63,7 +63,7 @@ public class SistemPernapasanActivity extends AppCompatActivity {
             public void onClick(View v) {
                 btnPreviousSistemPernapasan.setVisibility(View.GONE);
                 btnNextSistemPernapasan.setVisibility(View.VISIBLE);
-                txtSistemPernapasan.setText(materi[1]);
+                txtSistemPernapasan.setText(materi[0]);
             }
         });
 

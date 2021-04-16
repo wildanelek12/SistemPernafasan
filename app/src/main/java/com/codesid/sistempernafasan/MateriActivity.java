@@ -20,7 +20,8 @@ public class MateriActivity extends AppCompatActivity {
     ImageView btn_materi_frekuensi ;
     @BindView(R.id.btn_materi_pernapasan)
     ImageView btn_materi_pernapasan ;
-
+    @BindView(R.id.btn_materi_gangguan)
+    ImageView btn_materi_gangguan ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +57,14 @@ public class MateriActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MateriActivity.this,SistemPernapasanActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_materi_gangguan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MateriActivity.this,GangguanActivity.class);
                 startActivity(intent);
             }
         });

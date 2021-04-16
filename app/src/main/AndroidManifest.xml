@@ -13,10 +13,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SistemPernafasan"
         tools:replace="icon">
-        <activity android:name=".GangguanActivity"></activity>
-        <activity android:name=".MekanismeActivity" />
-        <activity android:name=".ActivityOrganDetail" />
-        <activity android:name=".ActivityLks" />
+        <activity android:name=".ActivityKhususFaring"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".GangguanActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MekanismeActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ActivityOrganDetail"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ActivityLks"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".VideoPlayActivity"
             android:screenOrientation="landscape" />

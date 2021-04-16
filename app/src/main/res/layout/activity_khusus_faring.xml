@@ -10,7 +10,7 @@
 
 
     <ImageView
-        android:id="@+id/btnBackGangguan"
+        android:id="@+id/btnBackKhususFaring"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_marginTop="@dimen/_5sdp"
@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/txtJudulGangguan"
+            android:id="@+id/txtNamaOrgankhusus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/comforta_bold"
@@ -53,7 +53,7 @@
 
 
             <ImageView
-                android:id="@+id/imgGangguan"
+                android:id="@+id/imgGambarOrgankhusus"
                 android:layout_width="@dimen/_175sdp"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -74,7 +74,7 @@
             app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
 
             <TextView
-                android:id="@+id/txtGangguan"
+                android:id="@+id/txtPenjelasanOrganKhusus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="aksjdhakjsdhkajasdasdasdasddsh"
@@ -89,12 +89,9 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
     <ImageView
-        android:id="@+id/btnPreviousPageGangguan"
+        android:id="@+id/btnPreviousSistemPernapasanKhusus"
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginLeft="@dimen/_45sdp"
@@ -104,7 +101,8 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/btnNextPageGangguan"
+
+        android:id="@+id/btnNextSistemPernapasanKhsus"
         android:layout_width="@dimen/_30sdp"
         android:layout_height="@dimen/_30sdp"
         android:layout_marginRight="@dimen/_45sdp"
@@ -112,6 +110,7 @@
         android:src="@drawable/btn_nextpage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnPreviousPageGangguan" />
+        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

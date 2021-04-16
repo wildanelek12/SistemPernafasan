@@ -5,6 +5,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -23,6 +24,8 @@ public class FrekuensiActivity extends AppCompatActivity {
     ConstraintLayout btnFrekuensiPosisi;
     @BindView(R.id.btnFrekuensiKegiatan)
     ConstraintLayout btnFrekuensiKegiatan;
+    @BindView(R.id.btnBackFrekuensi)
+    ImageView btnBackFrekuensi;
 
 
 
@@ -109,6 +112,13 @@ public class FrekuensiActivity extends AppCompatActivity {
                 btnFrekuensiPosisi.setBackgroundResource(R.drawable.border_organ);
                 btnFrekuensiKegiatan.setBackgroundResource(R.drawable.dialog_button_ok);
            
+            }
+        });
+
+        btnBackFrekuensi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 

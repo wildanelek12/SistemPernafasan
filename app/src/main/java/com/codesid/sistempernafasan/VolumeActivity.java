@@ -5,6 +5,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -25,6 +26,8 @@ public class VolumeActivity extends AppCompatActivity {
     ConstraintLayout btnVitalParu;
     @BindView(R.id.btnKapasitasTotal)
     ConstraintLayout btnKapasitasTotal;
+    @BindView(R.id.btnBackVolume)
+    ImageView btnBackVolume;
 
 
 
@@ -122,6 +125,13 @@ public class VolumeActivity extends AppCompatActivity {
                 btnVolumeResidu.setBackgroundResource(R.drawable.border_organ);
                 btnVitalParu.setBackgroundResource(R.drawable.border_organ);
                 btnKapasitasTotal.setBackgroundResource(R.drawable.dialog_button_ok);
+            }
+        });
+
+        btnBackVolume.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
             }
         });
 

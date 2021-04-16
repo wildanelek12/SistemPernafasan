@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -55,6 +56,8 @@ public class ActivityOrgan extends AppCompatActivity {
     TextView txtTrakea;
     @BindView(R.id.txtParu)
     TextView txtParu;
+    @BindView(R.id.btnBackOrgan)
+    ImageView btnBackOrgan;
     
 
 
@@ -74,103 +77,71 @@ public class ActivityOrgan extends AppCompatActivity {
         btnHidung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (txtHidung.getText().equals("Hidung")){
-                    Toast.makeText(ActivityOrgan.this, "Masuk Materi", Toast.LENGTH_SHORT).show();
-                }else {
-                    showDialog("Hidung", btnHidung, 0, txtHidung);
-                }
+                startDetail(0);
             }
         });
         btnBronkus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog("Bronkus",btnBronkus,1,txtBronkus);
+                startDetail(1);
             }
         });
         btnBronkiolus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog("Bronkiolus",btnBronkiolus,2,txtBronkiolus);
+                startDetail(2);
             }
         });
 
         btnAlveolus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog("Alveolus",btnAlveolus,3,txtAlveolus);
+                startDetail(3);
             }
         });
         btnFaring.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog("Faring",btnFaring,4,txtFaring);
+                startDetail(4);
             }
         });
         btnLaring.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog("Laring",btnLaring,5,txtLaring);
+                startDetail2(5);
             }
         });
         btnTrakea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog("Trakea",btnTrakea,6,txtTrakea);
+                startDetail(6);
             }
         });
         btnParu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDialog("Paru-Paru",btnParu,7,txtParu);
+                startDetail(7);
+
             }
         });
 
-
-
-
-
-
-    }
-
-
-    public void showDialog(String value, ConstraintLayout cl, int index, TextView textView){
-        Dialog alertDialog = new Dialog(ActivityOrgan.this);
-        alertDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        alertDialog.setContentView(R.layout.dialog_materi);
-        alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-
-        String organ [] ={"Hidung","Bronkus","Bronkiolus","Alveolus","Faring","Laring","Trakea","Paru-Paru"};
-
-        final Spinner spinner = alertDialog.findViewById(R.id.spinner_organ);
-        final Button btnok = alertDialog.findViewById(R.id.btn_ok_materi);
-
-
-        btnok.setOnClickListener(new View.OnClickListener() {
+        btnBackOrgan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if (spinner.getSelectedItem().equals(organ[index])){
-                    cl.setBackgroundResource(R.drawable.border_organ_true);
-                    alertDialog.dismiss();
-                    textView.setText(organ[index]);
-                    skor+=10;
-                    
-                }else{
-                    cl.setBackgroundResource(R.drawable.border_organ_false);
-                    alertDialog.dismiss();
-                }
-
-
-
+                finish();
             }
         });
+    }
 
-
-
-
-
-
-        alertDialog.show();
+    public void startDetail(int id){
+        Intent intent = new Intent(ActivityOrgan.this,ActivityOrganDetail.class);
+        intent.putExtra("key",id);
+        startActivity(intent);
+    }
+    public void startDetail2(int id){
+        Intent intent = new Intent(ActivityOrgan.this,ActivityKhususFaring.class);
+        intent.putExtra("key",id);
+        startActivity(intent);
     }
 
 }

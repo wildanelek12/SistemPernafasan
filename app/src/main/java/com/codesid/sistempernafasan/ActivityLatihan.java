@@ -31,5 +31,12 @@ public class ActivityLatihan extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnLks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ActivityLatihan.this,ActivityLks.class);
+                startActivity(intent);
+            }
+        });
     }
 }
