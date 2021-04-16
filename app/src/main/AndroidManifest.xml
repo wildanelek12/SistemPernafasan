@@ -4,7 +4,6 @@
     package="com.codesid.sistempernafasan">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -13,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SistemPernafasan"
         tools:replace="icon">
+        <service android:enabled="true" android:name=".BackgroundSoundServices" />
         <activity android:name=".ActivityKhususFaring"
             android:screenOrientation="landscape"></activity>
         <activity

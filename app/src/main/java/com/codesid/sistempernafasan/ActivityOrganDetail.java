@@ -3,6 +3,7 @@ package com.codesid.sistempernafasan;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -60,11 +61,14 @@ public class ActivityOrganDetail extends AppCompatActivity {
     String judulOrgan []={
             "Hidung","Bronkus","Bronkiolus","Alveolus","Faring","Laring","Trakea","Paru-Paru"
     };
+    int id_music [] ={
+            R.raw.hidung,R.raw.bronkus,R.raw.bronkiolus,R.raw.alveolus,R.raw.faring,R.raw.laring1,R.raw.trakea
+    };
 
     int gambarOrgan [] ={
             R.drawable.organ1,R.drawable.organ2,R.drawable.organ2,R.drawable.organ2,R.drawable.organ5,R.drawable.organ5,R.drawable.organ2,R.drawable.organ8
     };
-
+    MediaPlayer mp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -86,11 +90,17 @@ public class ActivityOrganDetail extends AppCompatActivity {
             imgGambarOrgan.setImageResource(gambarOrgan[id]);
         }
 
+        if (id==7){
 
+        }else {
+             mp = MediaPlayer.create(ActivityOrganDetail.this, id_music[id]);
+            mp.start();
+        }
 
         btnBackOrganDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp.release();
                 finish();
             }
         });

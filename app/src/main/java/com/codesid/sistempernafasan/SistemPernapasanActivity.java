@@ -2,6 +2,7 @@ package com.codesid.sistempernafasan;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.opengl.Visibility;
 import android.os.Bundle;
 import android.view.View;
@@ -25,7 +26,7 @@ public class SistemPernapasanActivity extends AppCompatActivity {
     ImageView btnPreviousSistemPernapasan;
     @BindView(R.id.btnBackSistemPernapasan)
     ImageView btnBackSistemPernapasan;
-
+    MediaPlayer mp;
 
     String materi[]={
                 "Pernapasan adalah proses menghirup udara bebas yang mengandung oksigen (inspirasi) dan mengeluarkan udara yang mengandung karbondioksida (ekspirasi).\n" +
@@ -50,12 +51,18 @@ public class SistemPernapasanActivity extends AppCompatActivity {
         txtSistemPernapasan.setText(materi[0]);
         btnPreviousSistemPernapasan.setVisibility(View.GONE);
 
+        mp = MediaPlayer.create(this, R.raw.sistem_pernapasan1);
+        mp.start();
         btnNextSistemPernapasan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 btnPreviousSistemPernapasan.setVisibility(View.VISIBLE);
                 btnNextSistemPernapasan.setVisibility(View.GONE);
                 txtSistemPernapasan.setText(materi[1]);
+                stopPlaying();
+                mp = MediaPlayer.create(SistemPernapasanActivity.this, R.raw.sistem_pernapasan2);
+                mp.start();
+
             }
         });
         btnPreviousSistemPernapasan.setOnClickListener(new View.OnClickListener() {
@@ -64,6 +71,10 @@ public class SistemPernapasanActivity extends AppCompatActivity {
                 btnPreviousSistemPernapasan.setVisibility(View.GONE);
                 btnNextSistemPernapasan.setVisibility(View.VISIBLE);
                 txtSistemPernapasan.setText(materi[0]);
+                stopPlaying();
+                mp = MediaPlayer.create(SistemPernapasanActivity.this, R.raw.sistem_pernapasan1);
+                mp.start();
+
             }
         });
 
@@ -74,9 +85,17 @@ public class SistemPernapasanActivity extends AppCompatActivity {
             }
         });
 
+
         Glide.with(this)
                 .asGif()
                 .load(R.drawable.as)
                 .into(imgGif);
+    }
+    private void stopPlaying() {
+        if (mp != null) {
+            mp.stop();
+            mp.release();
+            mp = null;
+        }
     }
 }
