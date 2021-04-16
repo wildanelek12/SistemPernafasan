@@ -144,7 +144,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/comforta_bold"
-                    android:text="Proses Inspirasi"
+                    android:text="Proses Ekspirasi"
                     android:textColor="#2d2d2d"
                     android:textSize="@dimen/_14ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
