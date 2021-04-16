@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".VolumeActivity"
-    android:background="@drawable/frame_materi2">
+    android:background="@drawable/frame_tes">
 
 
     <ImageView
@@ -33,6 +33,7 @@
             android:fontFamily="@font/comforta_bold"
             android:text="Volume Pernapasan"
             android:textSize="@dimen/_18ssp"
+            android:textColor="#2d2d2d"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -62,6 +63,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/comforta_bold"
                     android:text="Volume Tidal"
+                    android:textColor="#2d2d2d"
                     android:textSize="@dimen/_13ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -87,6 +89,7 @@
                     android:fontFamily="@font/comforta_bold"
                     android:text="Volume Cadangan Ekspirasi (Suplementer)"
                     android:textSize="@dimen/_10ssp"
+                    android:textColor="#2d2d2d"
                     android:textAlignment="center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -114,6 +117,7 @@
                     android:text="Volume Cadangan  i (Komplementer)"
                     android:textSize="@dimen/_10ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="#2d2d2d"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -139,6 +143,7 @@
                     android:textSize="@dimen/_12ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    android:textColor="#2d2d2d"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -162,6 +167,7 @@
                     android:text="Kapasitas Vital Paru-Paru"
                     android:textSize="@dimen/_11ssp"
                     android:textAlignment="center"
+                    android:textColor="#2d2d2d"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -189,6 +195,7 @@
                     android:text="Kapasitas Total Paru-Paru"
                     android:textSize="@dimen/_11ssp"
                     android:textAlignment="center"
+                    android:textColor="#2d2d2d"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -202,8 +209,9 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="@dimen/_375sdp"
+            android:layout_width="@dimen/_360sdp"
             android:layout_height="@dimen/_223sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
             android:background="@drawable/border_organ"
             app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
@@ -219,6 +227,7 @@
                 android:text="aksjdhakjsdhkajasdasdasdasddshasddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
                 android:textSize="@dimen/_13ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="#2d2d2d"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

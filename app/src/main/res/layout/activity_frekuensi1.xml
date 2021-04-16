@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/comforta_bold"
             android:text="FAKTOR YANG MEMPENGARUHI FREKUENSI PERNAPASAN "
-            android:textSize="@dimen/_18ssp"
+            android:textSize="@dimen/_15ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -175,20 +175,22 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="@dimen/_375sdp"
+            android:layout_width="@dimen/_365sdp"
             android:layout_height="@dimen/_223sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
             android:background="@drawable/border_organ"
             app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
-            app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout3"
+            app:layout_constraintVertical_bias="0.0">
 
             <TextView
 
                 android:id="@+id/txtFrekuensi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:lineSpacingExtra="@dimen/_6sdp"
                 android:layout_marginHorizontal="@dimen/_20sdp"
+                android:lineSpacingExtra="@dimen/_6sdp"
                 android:text="aksjdhakjsdhkajasdasdasdasddshasddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
                 android:textSize="@dimen/_13ssp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -198,7 +200,6 @@
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
