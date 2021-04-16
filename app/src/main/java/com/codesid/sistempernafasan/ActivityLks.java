@@ -6,6 +6,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -71,11 +72,12 @@ public class ActivityLks extends AppCompatActivity {
         setContentView(R.layout.activity_lks);
 
         ButterKnife.bind(this);
-
+        MediaPlayer mp_click = MediaPlayer.create(this, R.raw.click1);
 
         btnHidung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 if (txtHidung.getText().equals("Hidung")){
 
                 }else {
@@ -86,12 +88,14 @@ public class ActivityLks extends AppCompatActivity {
         btnBronkus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 showDialog("Bronkus",btnBronkus,1,txtBronkus);
             }
         });
         btnBronkiolus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 showDialog("Bronkiolus",btnBronkiolus,2,txtBronkiolus);
             }
         });
@@ -99,36 +103,42 @@ public class ActivityLks extends AppCompatActivity {
         btnAlveolus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 showDialog("Alveolus",btnAlveolus,3,txtAlveolus);
             }
         });
         btnFaring.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 showDialog("Faring",btnFaring,4,txtFaring);
             }
         });
         btnLaring.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 showDialog("Laring",btnLaring,5,txtLaring);
             }
         });
         btnTrakea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 showDialog("Trakea",btnTrakea,6,txtTrakea);
             }
         });
         btnParu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 showDialog("Paru-Paru",btnParu,7,txtParu);
             }
         });
         btnBackLks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 finish();
             }
         });

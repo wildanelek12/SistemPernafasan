@@ -7,6 +7,7 @@ import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -73,22 +74,25 @@ public class ActivityOrgan extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-
+        MediaPlayer mp_click = MediaPlayer.create(this, R.raw.click1);
         btnHidung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 startDetail(0);
             }
         });
         btnBronkus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 startDetail(1);
             }
         });
         btnBronkiolus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 startDetail(2);
             }
         });
@@ -96,30 +100,35 @@ public class ActivityOrgan extends AppCompatActivity {
         btnAlveolus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 startDetail(3);
             }
         });
         btnFaring.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 startDetail(4);
             }
         });
         btnLaring.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 startDetail2(5);
             }
         });
         btnTrakea.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 startDetail(6);
             }
         });
         btnParu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 startDetail(7);
 
             }
@@ -128,9 +137,11 @@ public class ActivityOrgan extends AppCompatActivity {
         btnBackOrgan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 finish();
             }
         });
+
     }
 
     public void startDetail(int id){

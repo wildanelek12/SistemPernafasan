@@ -51,11 +51,15 @@ public class SistemPernapasanActivity extends AppCompatActivity {
         txtSistemPernapasan.setText(materi[0]);
         btnPreviousSistemPernapasan.setVisibility(View.GONE);
 
+        MediaPlayer mp_click = MediaPlayer.create(this, R.raw.click1);
+
+
         mp = MediaPlayer.create(this, R.raw.sistem_pernapasan1);
         mp.start();
         btnNextSistemPernapasan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp_click.start();
                 btnPreviousSistemPernapasan.setVisibility(View.VISIBLE);
                 btnNextSistemPernapasan.setVisibility(View.GONE);
                 txtSistemPernapasan.setText(materi[1]);
@@ -68,6 +72,7 @@ public class SistemPernapasanActivity extends AppCompatActivity {
         btnPreviousSistemPernapasan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp_click.start();
                 btnPreviousSistemPernapasan.setVisibility(View.GONE);
                 btnNextSistemPernapasan.setVisibility(View.VISIBLE);
                 txtSistemPernapasan.setText(materi[0]);
@@ -81,6 +86,8 @@ public class SistemPernapasanActivity extends AppCompatActivity {
         btnBackSistemPernapasan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp_click.start();
+                mp.release();
                 finish();
             }
         });
@@ -90,6 +97,7 @@ public class SistemPernapasanActivity extends AppCompatActivity {
                 .asGif()
                 .load(R.drawable.as)
                 .into(imgGif);
+
     }
     private void stopPlaying() {
         if (mp != null) {

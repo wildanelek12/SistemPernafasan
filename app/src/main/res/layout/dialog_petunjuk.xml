@@ -7,7 +7,7 @@
 
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imgInsideDialog"
         android:layout_width="@dimen/_400sdp"
         android:layout_height="@dimen/_260sdp"
         android:src="@drawable/tujuann"
@@ -21,7 +21,7 @@
         android:layout_width="@dimen/_50sdp"
         android:layout_height="@dimen/_50sdp"
         android:src="@drawable/group_18"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView6"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6" />
+        app:layout_constraintBottom_toBottomOf="@+id/imgInsideDialog"
+        app:layout_constraintEnd_toEndOf="@+id/imgInsideDialog" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

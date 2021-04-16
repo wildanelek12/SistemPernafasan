@@ -3,6 +3,7 @@ package com.codesid.sistempernafasan;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -26,6 +27,9 @@ public class ActivityKhususFaring extends AppCompatActivity {
     ImageView btnNextSistemPernapasanKhsus;
     @BindView(R.id.btnPreviousSistemPernapasanKhusus)
     ImageView btnPreviousSistemPernapasanKhusus;
+    MediaPlayer mp;
+
+
     String penjelasanOrgan[]={
            "Laring atau ruang suara merupakan organ pernapasan yang menghubungkan faring dengan trakea.\n" +
                    "\n" +
@@ -42,7 +46,9 @@ public class ActivityKhususFaring extends AppCompatActivity {
     String judulOrgan []={
             "Laring"
     };
-
+    int id_music [] ={
+            R.raw.laring1,R.raw.laring2
+    };
     int gambarOrgan [] ={
             R.drawable.organ5
     };
@@ -57,30 +63,42 @@ public class ActivityKhususFaring extends AppCompatActivity {
         Intent intent = getIntent();
         txtNamaOrgan.setText(judulOrgan[0]);
         txtPenjelasanOrgan.setText(penjelasanOrgan[0]);
-
+        MediaPlayer mp_click = MediaPlayer.create(this, R.raw.click1);
 
             imgGambarOrgan.setImageResource(gambarOrgan[0]);
         btnPreviousSistemPernapasanKhusus.setVisibility(View.GONE);
+        mp = MediaPlayer.create(ActivityKhususFaring.this, R.raw.laring1);
+        mp.start();
         btnNextSistemPernapasanKhsus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 btnPreviousSistemPernapasanKhusus.setVisibility(View.VISIBLE);
                 btnNextSistemPernapasanKhsus.setVisibility(View.GONE);
                 txtPenjelasanOrgan.setText(penjelasanOrgan[1]);
+                stopPlaying();
+                mp = MediaPlayer.create(ActivityKhususFaring.this, R.raw.laring2);
+                mp.start();
             }
         });
         btnPreviousSistemPernapasanKhusus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 btnPreviousSistemPernapasanKhusus.setVisibility(View.GONE);
                 btnNextSistemPernapasanKhsus.setVisibility(View.VISIBLE);
                 txtPenjelasanOrgan.setText(penjelasanOrgan[0]);
+                stopPlaying();
+                mp = MediaPlayer.create(ActivityKhususFaring.this, R.raw.laring1);
+                mp.start();
             }
         });
 
         btnBackOrganDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
+                mp.release();
                 finish();
             }
         });
@@ -89,4 +107,12 @@ public class ActivityKhususFaring extends AppCompatActivity {
 
 
     }
+    private void stopPlaying() {
+        if (mp != null) {
+            mp.stop();
+            mp.release();
+            mp = null;
+        }
+    }
+
 }

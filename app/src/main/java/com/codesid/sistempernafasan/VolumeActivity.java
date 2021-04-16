@@ -3,6 +3,7 @@ package com.codesid.sistempernafasan;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -28,7 +29,7 @@ public class VolumeActivity extends AppCompatActivity {
     ConstraintLayout btnKapasitasTotal;
     @BindView(R.id.btnBackVolume)
     ImageView btnBackVolume;
-
+    MediaPlayer mp;
 
 
 
@@ -40,6 +41,7 @@ public class VolumeActivity extends AppCompatActivity {
                     "Total dari volume tidal + volume cadangan ekspirasi + volume cadangan inspirasi,volumenya sekitar  3500 mL",
                     "Volume udara yang dapat ditampung secara maksimal dalam paru-paru. Merupakan total dari volume kapasitas vital paru-paru volume residu,volumenya sekitar 4500 mL\n"
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,11 +56,17 @@ public class VolumeActivity extends AppCompatActivity {
         btnVolumeResidu.setBackgroundResource(R.drawable.border_organ);
         btnVitalParu.setBackgroundResource(R.drawable.border_organ);
         btnKapasitasTotal.setBackgroundResource(R.drawable.border_organ);
+        mp = MediaPlayer.create(VolumeActivity.this, R.raw.volume_pernapasan);
+        mp.start();
+
+        MediaPlayer mp_click = MediaPlayer.create(this, R.raw.click1);
+
 
 
         btnVolumeTidal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 setTextVolume(0);
                 btnVolumeTidal.setBackgroundResource(R.drawable.dialog_button_ok);
                 btnVolumeCadanganEkspirasi.setBackgroundResource(R.drawable.border_organ);
@@ -71,6 +79,7 @@ public class VolumeActivity extends AppCompatActivity {
         btnVolumeCadanganEkspirasi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 setTextVolume(1);
                 btnVolumeTidal.setBackgroundResource(R.drawable.border_organ);
                 btnVolumeCadanganEkspirasi.setBackgroundResource(R.drawable.dialog_button_ok);
@@ -83,6 +92,7 @@ public class VolumeActivity extends AppCompatActivity {
         btnVolumeCadanganKomplementer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 setTextVolume(2);
                 btnVolumeTidal.setBackgroundResource(R.drawable.border_organ);
                 btnVolumeCadanganEkspirasi.setBackgroundResource(R.drawable.border_organ);
@@ -95,6 +105,7 @@ public class VolumeActivity extends AppCompatActivity {
         btnVolumeResidu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 setTextVolume(3);
                 btnVolumeTidal.setBackgroundResource(R.drawable.border_organ);
                 btnVolumeCadanganEkspirasi.setBackgroundResource(R.drawable.border_organ);
@@ -107,6 +118,8 @@ public class VolumeActivity extends AppCompatActivity {
         btnVitalParu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
+                setTextVolume(4);
                 btnVolumeTidal.setBackgroundResource(R.drawable.border_organ);
                 btnVolumeCadanganEkspirasi.setBackgroundResource(R.drawable.border_organ);
                 btnVolumeCadanganKomplementer.setBackgroundResource(R.drawable.border_organ);
@@ -118,6 +131,7 @@ public class VolumeActivity extends AppCompatActivity {
         btnKapasitasTotal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 setTextVolume(5);
                 btnVolumeTidal.setBackgroundResource(R.drawable.border_organ);
                 btnVolumeCadanganEkspirasi.setBackgroundResource(R.drawable.border_organ);
@@ -131,6 +145,8 @@ public class VolumeActivity extends AppCompatActivity {
         btnBackVolume.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
+                mp.release();
                 finish();
             }
         });

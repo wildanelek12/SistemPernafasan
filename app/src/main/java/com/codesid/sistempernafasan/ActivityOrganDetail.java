@@ -75,6 +75,8 @@ public class ActivityOrganDetail extends AppCompatActivity {
         setContentView(R.layout.activity_organ_detail);
 
         ButterKnife.bind(this);
+        MediaPlayer mp_click = MediaPlayer.create(this, R.raw.click1);
+
 
         Intent intent = getIntent();
         int id = intent.getIntExtra("key",0);
@@ -100,10 +102,15 @@ public class ActivityOrganDetail extends AppCompatActivity {
         btnBackOrganDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mp.release();
+                mp_click.start();
+                if(id!=7) {
+                    mp.release();
+                }
                 finish();
             }
         });
+
+
 
 
 

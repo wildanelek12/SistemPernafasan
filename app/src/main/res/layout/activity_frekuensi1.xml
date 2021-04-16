@@ -42,16 +42,15 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout3"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/_223sdp"
+            android:layout_height="@dimen/_205sdp"
             android:layout_marginTop="@dimen/_20sdp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
             tools:layout_editor_absoluteX="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/btnFrekuensiUmur"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_28sdp"
+                android:layout_height="@dimen/_30sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:background="@drawable/border_organ"
@@ -74,7 +73,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/btnFrekuensiJK"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_41sdp"
+                android:layout_height="@dimen/_30sdp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:background="@drawable/border_organ"
                 app:layout_constraintEnd_toEndOf="@+id/btnFrekuensiUmur"
@@ -86,8 +85,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/comforta_bold"
-                    android:text="JenisKelamin"
-                    android:textSize="@dimen/_10ssp"
+                    android:text="Jenis Kelamin"
+                    android:textSize="@dimen/_12ssp"
                     android:textAlignment="center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -113,7 +112,7 @@
                     android:fontFamily="@font/comforta_bold"
                     android:textAlignment="center"
                     android:text="Suhu Tubuh"
-                    android:textSize="@dimen/_10ssp"
+                    android:textSize="@dimen/_12ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -125,7 +124,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/btnFrekuensiPosisi"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_28sdp"
+                android:layout_height="@dimen/_30sdp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:background="@drawable/border_organ"
                 app:layout_constraintEnd_toEndOf="@+id/btnFrekuensiUmur"
@@ -149,7 +148,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/btnFrekuensiKegiatan"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_32sdp"
+                android:layout_height="@dimen/_38sdp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:background="@drawable/border_organ"
                 app:layout_constraintEnd_toEndOf="@+id/btnFrekuensiUmur"
@@ -161,7 +160,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/comforta_bold"
                     android:text="Kegiatan atau aktivitas tubuh"
-                    android:textSize="@dimen/_11ssp"
+                    android:textSize="@dimen/_12ssp"
                     android:textAlignment="center"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -177,11 +176,10 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="@dimen/_365sdp"
-            android:layout_height="@dimen/_223sdp"
+            android:layout_height="@dimen/_205sdp"
             android:layout_marginLeft="@dimen/_10sdp"
             android:background="@drawable/border_organ"
-            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
-            app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
+           app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
             app:layout_constraintTop_toTopOf="@+id/constraintLayout3"
             app:layout_constraintVertical_bias="0.0">
 

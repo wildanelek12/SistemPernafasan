@@ -3,6 +3,7 @@ package com.codesid.sistempernafasan;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.Image;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -27,6 +28,7 @@ public class GangguanActivity extends AppCompatActivity {
     ImageView btnNextPageGangguan;
     @BindView(R.id.btnPreviousPageGangguan)
     ImageView btnPreviousPageGangguan;
+    MediaPlayer mp;
 
 
     String penjelasanGangguan[]={
@@ -65,7 +67,9 @@ public class GangguanActivity extends AppCompatActivity {
     int gambarGangguan [] ={
             R.drawable.gangguan1,R.drawable.gangguan2,R.drawable.gangguan3,R.drawable.gangguan4,R.drawable.gangguan5,R.drawable.gangguan6,R.drawable.gangguan7
     };
-
+    int soundGangguan [] ={
+            R.raw.influenza,R.raw.tonsilitis,R.raw.faringitis,R.raw.pneumonia,R.raw.tuberculosis,R.raw.asma,R.raw.kanker_paru
+    };
     int index=0;
 
 
@@ -79,16 +83,22 @@ public class GangguanActivity extends AppCompatActivity {
         judulGangguan.setText(namaGangguan[index]);
         imgGangguan.setImageResource(gambarGangguan[index]);
         btnPreviousPageGangguan.setVisibility(View.INVISIBLE);
+        mp = MediaPlayer.create(GangguanActivity.this, soundGangguan[index]);
+        mp.start();
+        MediaPlayer mp_click = MediaPlayer.create(this, R.raw.click1);
 
         btnBackGangguan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
+                mp.release();
                 finish();
             }
         });
         btnPreviousPageGangguan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 index--;
 
                 if (index==6){
@@ -97,18 +107,27 @@ public class GangguanActivity extends AppCompatActivity {
                     txtGangguan.setText(penjelasanGangguan[index]);
                     judulGangguan.setText(namaGangguan[index]);
                     imgGangguan.setImageResource(gambarGangguan[index]);
+                    stopPlaying();
+                    mp = MediaPlayer.create(GangguanActivity.this, soundGangguan[index]);
+                    mp.start();
                 }else if (index==0){
                     btnNextPageGangguan.setVisibility(View.VISIBLE);
                     btnPreviousPageGangguan.setVisibility(View.INVISIBLE);
                     txtGangguan.setText(penjelasanGangguan[index]);
                     judulGangguan.setText(namaGangguan[index]);
                     imgGangguan.setImageResource(gambarGangguan[index]);
+                    stopPlaying();
+                    mp = MediaPlayer.create(GangguanActivity.this, soundGangguan[index]);
+                    mp.start();
                 }else {
                     btnNextPageGangguan.setVisibility(View.VISIBLE);
                     btnPreviousPageGangguan.setVisibility(View.VISIBLE);
                     txtGangguan.setText(penjelasanGangguan[index]);
                     judulGangguan.setText(namaGangguan[index]);
                     imgGangguan.setImageResource(gambarGangguan[index]);
+                    stopPlaying();
+                    mp = MediaPlayer.create(GangguanActivity.this, soundGangguan[index]);
+                    mp.start();
                 }
 
 
@@ -120,6 +139,7 @@ public class GangguanActivity extends AppCompatActivity {
         btnNextPageGangguan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                mp_click.start();
                 index++;
 
                 if (index==6){
@@ -128,18 +148,27 @@ public class GangguanActivity extends AppCompatActivity {
                     txtGangguan.setText(penjelasanGangguan[index]);
                     judulGangguan.setText(namaGangguan[index]);
                     imgGangguan.setImageResource(gambarGangguan[index]);
+                    stopPlaying();
+                    mp = MediaPlayer.create(GangguanActivity.this, soundGangguan[index]);
+                    mp.start();
                 }else if (index==0){
                     btnNextPageGangguan.setVisibility(View.VISIBLE);
                     btnPreviousPageGangguan.setVisibility(View.INVISIBLE);
                     txtGangguan.setText(penjelasanGangguan[index]);
                     judulGangguan.setText(namaGangguan[index]);
                     imgGangguan.setImageResource(gambarGangguan[index]);
+                    stopPlaying();
+                    mp = MediaPlayer.create(GangguanActivity.this, soundGangguan[index]);
+                    mp.start();
                 }else {
                     btnNextPageGangguan.setVisibility(View.VISIBLE);
                     btnPreviousPageGangguan.setVisibility(View.VISIBLE);
                     txtGangguan.setText(penjelasanGangguan[index]);
                     judulGangguan.setText(namaGangguan[index]);
                     imgGangguan.setImageResource(gambarGangguan[index]);
+                    stopPlaying();
+                    mp = MediaPlayer.create(GangguanActivity.this, soundGangguan[index]);
+                    mp.start();
                 }
 
             }
@@ -147,4 +176,12 @@ public class GangguanActivity extends AppCompatActivity {
 
 
     }
+    private void stopPlaying() {
+        if (mp != null) {
+            mp.stop();
+            mp.release();
+            mp = null;
+        }
+    }
+
 }

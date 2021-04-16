@@ -3,6 +3,7 @@ package com.codesid.sistempernafasan;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -28,7 +29,7 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
     TextView txt_answer_d;
     @BindView(R.id.btnBackEvaluasiSoal)
     ImageView btnBackEvaluasiSoal;
-
+    MediaPlayer mp;
     int index = 0;
     int score =0;
     private final String[] question = {
@@ -110,9 +111,11 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
 
 
             _setQuestion();
+        MediaPlayer mp_click2 = MediaPlayer.create(this, R.raw.click1);
             btnBackEvaluasiSoal.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    mp_click2.start();
                     finish();
                 }
             });
@@ -121,11 +124,17 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
     }
 
     public void _optionSelected(View v) {
+        MediaPlayer mp_click = MediaPlayer.create(this, R.raw.click1);
         switch (v.getId()) {
+
             case R.id.btn_a:
+                mp_click.start();
                 answer[index] = "a";
                 _setQuestion();
                 if (answer[index].equals(key[index])){
+                    stopPlaying();
+                    mp = MediaPlayer.create(ActivityEvaluasiSoal.this,R.raw.correct);
+                    mp.start();
                     new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
                             .setTitleText("Yeay, Benar!")
                             .setContentText("Jawaban anda benar")
@@ -135,6 +144,9 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
 
 
                 }else {
+                    stopPlaying();
+                    mp = MediaPlayer.create(ActivityEvaluasiSoal.this,R.raw.wrong);
+                    mp.start();
                     new SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
                             .setTitleText("Yahhh!")
                             .setContentText("Jawaban benar adalah "+key[index].toUpperCase())
@@ -146,9 +158,13 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
                 break;
 
             case R.id.btn_b:
+                mp_click.start();
                 answer[index] = "b";
                 _setQuestion();
                 if (answer[index].equals(key[index])){
+                    stopPlaying();
+                    mp = MediaPlayer.create(ActivityEvaluasiSoal.this,R.raw.correct);
+                    mp.start();
                     new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
                             .setTitleText("Yeay, Benar!")
                             .setContentText("Jawaban anda benar")
@@ -157,6 +173,9 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
 
 
                 }else {
+                    stopPlaying();
+                    mp = MediaPlayer.create(ActivityEvaluasiSoal.this,R.raw.wrong);
+                    mp.start();
                     new SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
                             .setTitleText("Yahhh!")
                             .setContentText("Jawaban benar adalah "+key[index].toUpperCase())
@@ -168,9 +187,13 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
                 break;
 
             case R.id.btn_c:
+                mp_click.start();
                 answer[index] = "c";
                 _setQuestion();
                 if (answer[index].equals(key[index])){
+                    stopPlaying();
+                    mp = MediaPlayer.create(ActivityEvaluasiSoal.this,R.raw.correct);
+                    mp.start();
                     new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
                             .setTitleText("Yeay, Benar!")
                             .setContentText("Jawaban anda benar")
@@ -178,6 +201,9 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
                     score+=10;
 
                 }else {
+                    stopPlaying();
+                    mp = MediaPlayer.create(ActivityEvaluasiSoal.this,R.raw.wrong);
+                    mp.start();
                     new SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
                             .setTitleText("Yahhh!")
                             .setContentText("Jawaban benar adalah "+key[index].toUpperCase())
@@ -189,9 +215,13 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
                 break;
 
             case R.id.btn_d:
+                mp_click.start();
                 answer[index] = "d";
                 _setQuestion();
                 if (answer[index].equals(key[index])){
+                    stopPlaying();
+                    mp = MediaPlayer.create(ActivityEvaluasiSoal.this,R.raw.correct);
+                    mp.start();
                     new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
                             .setTitleText("Yeay, Benar!")
                             .setContentText("Jawaban anda benar")
@@ -200,6 +230,9 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
 
 
                 }else {
+                    stopPlaying();
+                    mp = MediaPlayer.create(ActivityEvaluasiSoal.this,R.raw.wrong);
+                    mp.start();
                     new SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
                             .setTitleText("Yahhh!")
                             .setContentText("Jawaban benar adalah "+key[index].toUpperCase())
@@ -216,6 +249,7 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
             Intent intent = new Intent(this,ScoreActivity.class);
             intent.putExtra("score",score);
             startActivity(intent);
+            finish();
         }else {
             _setQuestion();
         }
@@ -226,6 +260,13 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
         txt_answer_b.setText(option[index][1]);
         txt_answer_c.setText(option[index][2]);
         txt_answer_d.setText(option[index][3]);
+    }
+    private void stopPlaying() {
+        if (mp != null) {
+            mp.stop();
+            mp.release();
+            mp = null;
+        }
     }
 
 }

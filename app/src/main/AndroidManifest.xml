@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SistemPernafasan"
         tools:replace="icon">
-        <service android:enabled="true" android:name=".BackgroundSoundServices" />
+        <service android:enabled="true" android:name=".BackgroundService" />
         <activity android:name=".ActivityKhususFaring"
             android:screenOrientation="landscape"></activity>
         <activity

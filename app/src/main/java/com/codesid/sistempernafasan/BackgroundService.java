@@ -5,7 +5,9 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.IBinder;
 
-public class BackgroundSoundServices extends Service {
+import androidx.annotation.Nullable;
+
+public class BackgroundService extends Service {
     private static final String TAG = null;
     MediaPlayer player;
     public IBinder onBind(Intent arg0) {
@@ -15,21 +17,30 @@ public class BackgroundSoundServices extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-//        player = MediaPlayer.create(this, R.raw.idil);
+
+
+        player = MediaPlayer.create(this, R.raw.backsound);
         player.setLooping(true); // Set looping
         player.setVolume(100,100);
 
     }
     public int onStartCommand(Intent intent, int flags, int startId) {
+
+
         player.start();
+
         return START_STICKY;
     }
 
     public void onStart(Intent intent, int startId) {
-        // TO DO
+        // TODO
+
+
+
     }
     public IBinder onUnBind(Intent arg0) {
-        // TO DO Auto-generated method
+        // TODO Auto-generated method stub
+
         return null;
     }
 
@@ -41,6 +52,7 @@ public class BackgroundSoundServices extends Service {
     }
     @Override
     public void onDestroy() {
+
         player.stop();
         player.release();
     }
@@ -49,4 +61,6 @@ public class BackgroundSoundServices extends Service {
     public void onLowMemory() {
 
     }
+
+
 }

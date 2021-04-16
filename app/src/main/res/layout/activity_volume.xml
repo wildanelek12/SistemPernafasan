@@ -52,7 +52,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/btnVolumeTidal"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_28sdp"
+                android:layout_height="@dimen/_27sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_20sdp"
                 android:background="@drawable/border_organ"
@@ -115,7 +115,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/comforta_bold"
                     android:textAlignment="center"
-                    android:text="Volume Cadangan  i (Komplementer)"
+                    android:text="Volume Cadangan (Komplementer)"
                     android:textSize="@dimen/_10ssp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     android:textColor="#2d2d2d"
@@ -154,7 +154,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/btnVitalParu"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_32sdp"
+                android:layout_height="@dimen/_30sdp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:background="@drawable/border_organ"
                 app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
@@ -182,7 +182,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/btnKapasitasTotal"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_32sdp"
+                android:layout_height="@dimen/_30sdp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:background="@drawable/border_organ"
                 app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
@@ -211,10 +211,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="@dimen/_360sdp"
-            android:layout_height="@dimen/_223sdp"
+            android:layout_height="@dimen/_200sdp"
             android:layout_marginLeft="@dimen/_10sdp"
             android:background="@drawable/border_organ"
-            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
             app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
 

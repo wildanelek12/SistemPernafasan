@@ -8,6 +8,10 @@
     android:background="@drawable/score">
 
 
+
+
+
+
     <TextView
         android:id="@+id/txt_score"
         android:layout_width="wrap_content"
