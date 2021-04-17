@@ -179,5 +179,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <ImageView
+        android:id="@+id/imgBtn_sound_off"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/sound_off"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextMekanisme"
+        app:layout_constraintStart_toEndOf="@+id/btnNextMekanisme" />
+
+    <ImageView
+        android:id="@+id/imgBtn_sound"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/sound_on"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextMekanisme"
+        app:layout_constraintStart_toEndOf="@+id/btnNextMekanisme" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

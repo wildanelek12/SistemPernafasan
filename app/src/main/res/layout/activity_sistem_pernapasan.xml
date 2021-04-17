@@ -45,8 +45,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout3"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/_205sdp"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_height="@dimen/_225sdp"
+            android:layout_marginTop="@dimen/_15sdp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView">
 
@@ -67,7 +67,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="@dimen/_300sdp"
-            android:layout_height="@dimen/_205sdp"
+            android:layout_height="@dimen/_225sdp"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
             app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
 
@@ -111,5 +111,23 @@
         android:src="@drawable/btn_nextpage"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imgBtn_sound_off"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/sound_off"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextSistemPernapasan"
+        app:layout_constraintStart_toEndOf="@+id/btnNextSistemPernapasan" />
+
+    <ImageView
+        android:id="@+id/imgBtn_sound"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:src="@drawable/sound_on"
+        app:layout_constraintBottom_toTopOf="@+id/btnNextSistemPernapasan"
+        app:layout_constraintStart_toEndOf="@+id/btnNextSistemPernapasan" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
