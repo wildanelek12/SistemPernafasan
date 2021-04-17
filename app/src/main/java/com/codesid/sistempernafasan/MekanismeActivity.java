@@ -51,6 +51,7 @@ public class MekanismeActivity extends AppCompatActivity {
                             "volume rongga dada mengecil -> tekanan paru-paru membesar -> udara terdorong keluar.\n"
 
     };
+    int gambarMekanisme []={R.drawable.dada_inspirasi,R.drawable.dada_ekspirasi,R.drawable.perut_inspirasi,R.drawable.perut_ekspirasi};
 
 
     int index = 0;
@@ -64,6 +65,7 @@ public class MekanismeActivity extends AppCompatActivity {
         txtJudulMekanisme.setText(judulMekanisme2[index]);
         btnInspirasi.setBackgroundResource(R.drawable.dialog_button_ok);
         btnEkspirasi.setBackgroundResource(R.drawable.border_organ);
+        imgMekanismePernapasan.setImageResource(gambarMekanisme[0]);
         txtPenjelasanMekanisme.setText(penjelasanMekanisme[0]);
         btnPreviousMekanisme.setVisibility(View.INVISIBLE);
         mp = MediaPlayer.create(MekanismeActivity.this, R.raw.pernapasan_dada);
@@ -90,6 +92,7 @@ public class MekanismeActivity extends AppCompatActivity {
                 txtPenjelasanMekanisme.setText(penjelasanMekanisme[2]);
                 txtJudulMekanismeFix.setText(judulMekanisme[index]);
                 txtJudulMekanisme.setText(judulMekanisme2[index]);
+                imgMekanismePernapasan.setImageResource(gambarMekanisme[2]);
                 stopPlaying();
                 mp = MediaPlayer.create(MekanismeActivity.this, R.raw.pernapasan_perut);
                 mp.start();
@@ -108,6 +111,7 @@ public class MekanismeActivity extends AppCompatActivity {
                 txtPenjelasanMekanisme.setText(penjelasanMekanisme[0]);
                 txtJudulMekanismeFix.setText(judulMekanisme[index]);
                 txtJudulMekanisme.setText(judulMekanisme2[index]);
+                imgMekanismePernapasan.setImageResource(gambarMekanisme[0]);
                 stopPlaying();
                 mp = MediaPlayer.create(MekanismeActivity.this, R.raw.pernapasan_dada);
                 mp.start();
@@ -123,10 +127,12 @@ public class MekanismeActivity extends AppCompatActivity {
                         btnInspirasi.setBackgroundResource(R.drawable.dialog_button_ok);
                         btnEkspirasi.setBackgroundResource(R.drawable.border_organ);
                         txtPenjelasanMekanisme.setText(penjelasanMekanisme[0]);
+                        imgMekanismePernapasan.setImageResource(gambarMekanisme[0]);
                     }else{
                         btnInspirasi.setBackgroundResource(R.drawable.dialog_button_ok);
                         btnEkspirasi.setBackgroundResource(R.drawable.border_organ);
                         txtPenjelasanMekanisme.setText(penjelasanMekanisme[2]);
+                        imgMekanismePernapasan.setImageResource(gambarMekanisme[2]);
                     }
 
                 }
@@ -139,10 +145,12 @@ public class MekanismeActivity extends AppCompatActivity {
                         btnInspirasi.setBackgroundResource(R.drawable.border_organ);
                         btnEkspirasi.setBackgroundResource(R.drawable.dialog_button_ok);
                         txtPenjelasanMekanisme.setText(penjelasanMekanisme[1]);
+                        imgMekanismePernapasan.setImageResource(gambarMekanisme[1]);
                     }else{
                         btnInspirasi.setBackgroundResource(R.drawable.border_organ);
                         btnEkspirasi.setBackgroundResource(R.drawable.dialog_button_ok);
                         txtPenjelasanMekanisme.setText(penjelasanMekanisme[3]);
+                        imgMekanismePernapasan.setImageResource(gambarMekanisme[3]);
                     }
                 }
             });
