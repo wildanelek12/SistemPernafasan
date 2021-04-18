@@ -7,6 +7,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
@@ -41,6 +42,10 @@ import butterknife.ButterKnife;
         ImageView btnMenuMateri;
         @BindView(R.id.btnMenuVideo)
         ImageView btnMenuVideo;
+        @BindView(R.id.imgBtn_sound)
+        ImageView imgBtnSoundOn;
+        @BindView(R.id.imgBtn_sound_off)
+        ImageView imgBtnSoundOff;
 
 
     @Override
@@ -63,6 +68,25 @@ import butterknife.ButterKnife;
         btnMenuMateri.startAnimation(connectingAnimation);
         btnMenuVideo.startAnimation(connectingAnimation);
         btnMenuLatihan.startAnimation(connectingAnimation);
+
+        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        int suara = prefs.getInt("suara", 1); //0 is the default value.
+        if (suara==1){
+            imgBtnSoundOn.setVisibility(View.VISIBLE);
+            imgBtnSoundOff.setVisibility(View.INVISIBLE);
+            mp.setVolume(1,1);
+            mp_click.setVolume(1,1);
+            Intent svc=new Intent(MainMenu.this, BackgroundService.class);
+            startService(svc); //OR stopService(svc);
+        }else {
+            imgBtnSoundOn.setVisibility(View.INVISIBLE);
+            imgBtnSoundOff.setVisibility(View.VISIBLE);
+            mp.setVolume(0,0);
+            mp_click.setVolume(0,0);
+            Intent svc=new Intent(MainMenu.this, BackgroundService.class);
+            stopService(svc); //OR stopService(svc);
+        }
 
 
         btnMenuLatihan.setOnClickListener(new View.OnClickListener() {
@@ -205,6 +229,37 @@ import butterknife.ButterKnife;
                     }
                 });
                 alertDialog.show();
+            }
+        });
+
+
+        imgBtnSoundOn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp_click.start();
+                imgBtnSoundOn.setVisibility(View.INVISIBLE);
+                imgBtnSoundOff.setVisibility(View.VISIBLE);
+                mp.setVolume(0,0);
+                mp_click.setVolume(0,0);
+                Intent svc=new Intent(MainMenu.this, BackgroundService.class);
+                stopService(svc); //OR stopService(svc);
+                editor.putInt("suara", 0);
+                editor.apply(); // commit changes
+            }
+        });
+
+        imgBtnSoundOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp_click.start();
+                imgBtnSoundOn.setVisibility(View.VISIBLE);
+                imgBtnSoundOff.setVisibility(View.INVISIBLE);
+                mp.setVolume(1,1);
+                mp_click.setVolume(1,1);
+                Intent svc=new Intent(MainMenu.this, BackgroundService.class);
+                startService(svc); //OR stopService(svc);
+                editor.putInt("suara", 1);
+                editor.apply(); // commit changes
             }
         });
 

@@ -3,6 +3,7 @@ package com.codesid.sistempernafasan;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +30,13 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
     TextView txt_answer_d;
     @BindView(R.id.btnBackEvaluasiSoal)
     ImageView btnBackEvaluasiSoal;
+    @BindView(R.id.imgBtn_sound)
+    ImageView imgBtnSoundOn;
+    @BindView(R.id.imgBtn_sound_off)
+    ImageView imgBtnSoundOff;
     MediaPlayer mp;
+
+
     int index = 0;
     int score =0;
     private final String[] question = {
@@ -119,7 +126,54 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
                     finish();
                 }
             });
+        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        int suara = prefs.getInt("suara", 1); //0 is the default value.
+        if (suara==1){
+            imgBtnSoundOn.setVisibility(View.VISIBLE);
+            imgBtnSoundOff.setVisibility(View.INVISIBLE);
+            mp.setVolume(1,1);
+            mp_click2.setVolume(1,1);
+            Intent svc=new Intent(ActivityEvaluasiSoal.this, BackgroundService.class);
+            startService(svc); //OR stopService(svc);
+        }else {
+            imgBtnSoundOn.setVisibility(View.INVISIBLE);
+            imgBtnSoundOff.setVisibility(View.VISIBLE);
+            mp.setVolume(0,0);
+            mp_click2.setVolume(0,0);
+            Intent svc=new Intent(ActivityEvaluasiSoal.this, BackgroundService.class);
+            stopService(svc); //OR stopService(svc);
+        }
 
+        imgBtnSoundOn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp_click2.start();
+                imgBtnSoundOn.setVisibility(View.INVISIBLE);
+                imgBtnSoundOff.setVisibility(View.VISIBLE);
+                mp.setVolume(0,0);
+                mp_click2.setVolume(0,0);
+                Intent svc=new Intent(ActivityEvaluasiSoal.this, BackgroundService.class);
+                stopService(svc); //OR stopService(svc);
+                editor.putInt("suara", 0);
+                editor.apply(); // commit changes
+            }
+        });
+
+        imgBtnSoundOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp_click2.start();
+                imgBtnSoundOn.setVisibility(View.VISIBLE);
+                imgBtnSoundOff.setVisibility(View.INVISIBLE);
+                mp.setVolume(1,1);
+                mp_click2.setVolume(1,1);
+                Intent svc=new Intent(ActivityEvaluasiSoal.this, BackgroundService.class);
+                startService(svc); //OR stopService(svc);
+                editor.putInt("suara", 1);
+                editor.apply(); // commit changes
+            }
+        });
 
     }
 

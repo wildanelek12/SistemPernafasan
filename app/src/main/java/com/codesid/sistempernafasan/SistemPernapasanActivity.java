@@ -2,6 +2,8 @@ package com.codesid.sistempernafasan;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.opengl.Visibility;
 import android.os.Bundle;
@@ -26,6 +28,10 @@ public class SistemPernapasanActivity extends AppCompatActivity {
     ImageView btnPreviousSistemPernapasan;
     @BindView(R.id.btnBackSistemPernapasan)
     ImageView btnBackSistemPernapasan;
+    @BindView(R.id.imgBtn_sound)
+    ImageView imgBtnSoundOn;
+    @BindView(R.id.imgBtn_sound_off)
+    ImageView imgBtnSoundOff;
     MediaPlayer mp;
 
     String materi[]={
@@ -53,7 +59,24 @@ public class SistemPernapasanActivity extends AppCompatActivity {
 
         MediaPlayer mp_click = MediaPlayer.create(this, R.raw.click1);
 
-
+        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        int suara = prefs.getInt("suara", 1); //0 is the default value.
+        if (suara==1){
+            imgBtnSoundOn.setVisibility(View.VISIBLE);
+            imgBtnSoundOff.setVisibility(View.INVISIBLE);
+            mp.setVolume(1,1);
+            mp_click.setVolume(1,1);
+            Intent svc=new Intent(SistemPernapasanActivity.this, BackgroundService.class);
+            startService(svc); //OR stopService(svc);
+        }else {
+            imgBtnSoundOn.setVisibility(View.INVISIBLE);
+            imgBtnSoundOff.setVisibility(View.VISIBLE);
+            mp.setVolume(0,0);
+            mp_click.setVolume(0,0);
+            Intent svc=new Intent(SistemPernapasanActivity.this, BackgroundService.class);
+            stopService(svc); //OR stopService(svc);
+        }
         mp = MediaPlayer.create(this, R.raw.sistem_pernapasan1);
         mp.start();
         btnNextSistemPernapasan.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +120,36 @@ public class SistemPernapasanActivity extends AppCompatActivity {
                 .asGif()
                 .load(R.drawable.as)
                 .into(imgGif);
+        imgBtnSoundOn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp_click.start();
+                imgBtnSoundOn.setVisibility(View.INVISIBLE);
+                imgBtnSoundOff.setVisibility(View.VISIBLE);
+                mp.setVolume(0,0);
+                mp_click.setVolume(0,0);
+                Intent svc=new Intent(SistemPernapasanActivity.this, BackgroundService.class);
+                stopService(svc); //OR stopService(svc);
+                editor.putInt("suara", 0);
+                editor.apply(); // commit changes
+            }
+        });
+
+        imgBtnSoundOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp_click.start();
+                imgBtnSoundOn.setVisibility(View.VISIBLE);
+                imgBtnSoundOff.setVisibility(View.INVISIBLE);
+                mp.setVolume(1,1);
+                mp_click.setVolume(1,1);
+                Intent svc=new Intent(SistemPernapasanActivity.this, BackgroundService.class);
+                startService(svc); //OR stopService(svc);
+                editor.putInt("suara", 1);
+                editor.apply(); // commit changes
+            }
+        });
+
 
     }
     private void stopPlaying() {

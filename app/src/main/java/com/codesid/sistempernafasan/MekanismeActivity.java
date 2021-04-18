@@ -3,6 +3,8 @@ package com.codesid.sistempernafasan;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -32,6 +34,10 @@ public class MekanismeActivity extends AppCompatActivity {
     ImageView btnPreviousMekanisme;
     @BindView(R.id.btnBackMekanisme)
     ImageView btnBackMekanisme;
+    @BindView(R.id.imgBtn_sound)
+    ImageView imgBtnSoundOn;
+    @BindView(R.id.imgBtn_sound_off)
+    ImageView imgBtnSoundOff;
     MediaPlayer mp;
 
 
@@ -40,15 +46,15 @@ public class MekanismeActivity extends AppCompatActivity {
     String penjelasanMekanisme [] ={
 
                 "Otot-otot antartulang rusuk berkontraksi \n" +
-                        "Tulang rusuk terangkat -> volume rongga dada membesar -> tekanan udara paru-paru kecil -> udara masuk paru-paru \n",
+                        "Tulang rusuk terangkat → volume rongga dada membesar → tekanan udara paru-paru kecil → udara masuk paru-paru \n",
                     "Otot-otot antartulang rusuk relaksasi \n" +
-                            "Tulang rusuk turun -> volume rongga dada mengecil -> tekanan paru-paru membesar -> udara terdorong keluar\n",
+                            "Tulang rusuk turun → volume rongga dada mengecil → tekanan paru-paru membesar → udara terdorong keluar\n",
 
                 "Otot diaframa berkontraksi (mendatar) \n" +
-                        "volume rongga dada membesar -> tekanan udara paru-paru kecil -> udara masuk ke paru-paru \n",
+                        "volume rongga dada membesar → tekanan udara paru-paru kecil → udara masuk ke paru-paru \n",
 
                     "Otot diaframa relaksasi (melengkung) \n" +
-                            "volume rongga dada mengecil -> tekanan paru-paru membesar -> udara terdorong keluar.\n"
+                            "volume rongga dada mengecil  →  tekanan paru-paru membesar →  udara terdorong keluar.\n"
 
     };
     int gambarMekanisme []={R.drawable.dada_inspirasi,R.drawable.dada_ekspirasi,R.drawable.perut_inspirasi,R.drawable.perut_ekspirasi};
@@ -71,6 +77,25 @@ public class MekanismeActivity extends AppCompatActivity {
         mp = MediaPlayer.create(MekanismeActivity.this, R.raw.pernapasan_dada);
         mp.start();
         MediaPlayer mp_click = MediaPlayer.create(this, R.raw.click1);
+
+        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        int suara = prefs.getInt("suara", 1); //0 is the default value.
+        if (suara==1){
+            imgBtnSoundOn.setVisibility(View.VISIBLE);
+            imgBtnSoundOff.setVisibility(View.INVISIBLE);
+            mp.setVolume(1,1);
+            mp_click.setVolume(1,1);
+            Intent svc=new Intent(MekanismeActivity.this, BackgroundService.class);
+            startService(svc); //OR stopService(svc);
+        }else {
+            imgBtnSoundOn.setVisibility(View.INVISIBLE);
+            imgBtnSoundOff.setVisibility(View.VISIBLE);
+            mp.setVolume(0,0);
+            mp_click.setVolume(0,0);
+            Intent svc=new Intent(MekanismeActivity.this, BackgroundService.class);
+            stopService(svc); //OR stopService(svc);
+        }
 
         btnBackMekanisme.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -156,6 +181,35 @@ public class MekanismeActivity extends AppCompatActivity {
             });
 
 
+        imgBtnSoundOn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp_click.start();
+                imgBtnSoundOn.setVisibility(View.INVISIBLE);
+                imgBtnSoundOff.setVisibility(View.VISIBLE);
+                mp.setVolume(0,0);
+                mp_click.setVolume(0,0);
+                Intent svc=new Intent(MekanismeActivity.this, BackgroundService.class);
+                stopService(svc); //OR stopService(svc);
+                editor.putInt("suara", 0);
+                editor.apply(); // commit changes
+            }
+        });
+
+        imgBtnSoundOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp_click.start();
+                imgBtnSoundOn.setVisibility(View.VISIBLE);
+                imgBtnSoundOff.setVisibility(View.INVISIBLE);
+                mp.setVolume(1,1);
+                mp_click.setVolume(1,1);
+                Intent svc=new Intent(MekanismeActivity.this, BackgroundService.class);
+                startService(svc); //OR stopService(svc);
+                editor.putInt("suara", 1);
+                editor.apply(); // commit changes
+            }
+        });
 
 
     }

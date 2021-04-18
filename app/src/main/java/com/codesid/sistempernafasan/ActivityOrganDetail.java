@@ -3,6 +3,7 @@ package com.codesid.sistempernafasan;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -23,6 +24,10 @@ public class ActivityOrganDetail extends AppCompatActivity {
     ImageView imgGambarOrgan;
     @BindView(R.id.btnBackOrganDetail)
     ImageView btnBackOrganDetail;
+    @BindView(R.id.imgBtn_sound)
+    ImageView imgBtnSoundOn;
+    @BindView(R.id.imgBtn_sound_off)
+    ImageView imgBtnSoundOff;
 
     String penjelasanOrgan[]={
             "Hidung adalah organ pernapasan yang langsung berhubungan dengan udara luar. Hidung dilengkapi dengan rambut-rambut hidung, selaput lendir, dan konka dengan penjelasan sebagai berikut."+
@@ -62,7 +67,7 @@ public class ActivityOrganDetail extends AppCompatActivity {
             "Hidung","Bronkus","Bronkiolus","Alveolus","Faring","Laring","Trakea","Paru-Paru"
     };
     int id_music [] ={
-            R.raw.hidung,R.raw.bronkus,R.raw.bronkiolus,R.raw.alveolus,R.raw.faring,R.raw.laring1,R.raw.trakea
+            R.raw.hidung,R.raw.bronkus,R.raw.bronkiolus,R.raw.alveolus,R.raw.faring,R.raw.laring1,R.raw.trakea,R.raw.paru_paru
     };
 
     int gambarOrgan [] ={
@@ -77,7 +82,24 @@ public class ActivityOrganDetail extends AppCompatActivity {
         ButterKnife.bind(this);
         MediaPlayer mp_click = MediaPlayer.create(this, R.raw.click1);
 
-
+        SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        int suara = prefs.getInt("suara", 1); //0 is the default value.
+        if (suara==1){
+            imgBtnSoundOn.setVisibility(View.VISIBLE);
+            imgBtnSoundOff.setVisibility(View.INVISIBLE);
+            mp.setVolume(1,1);
+            mp_click.setVolume(1,1);
+            Intent svc=new Intent(ActivityOrganDetail.this, BackgroundService.class);
+            startService(svc); //OR stopService(svc);
+        }else {
+            imgBtnSoundOn.setVisibility(View.INVISIBLE);
+            imgBtnSoundOff.setVisibility(View.VISIBLE);
+            mp.setVolume(0,0);
+            mp_click.setVolume(0,0);
+            Intent svc=new Intent(ActivityOrganDetail.this, BackgroundService.class);
+            stopService(svc); //OR stopService(svc);
+        }
         Intent intent = getIntent();
         int id = intent.getIntExtra("key",0);
         txtNamaOrgan.setText(judulOrgan[id]);
@@ -92,24 +114,50 @@ public class ActivityOrganDetail extends AppCompatActivity {
             imgGambarOrgan.setImageResource(gambarOrgan[id]);
         }
 
-        if (id==7){
 
-        }else {
              mp = MediaPlayer.create(ActivityOrganDetail.this, id_music[id]);
             mp.start();
-        }
+
 
         btnBackOrganDetail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mp_click.start();
-                if(id!=7) {
                     mp.release();
-                }
+
                 finish();
             }
         });
 
+        imgBtnSoundOn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp_click.start();
+                imgBtnSoundOn.setVisibility(View.INVISIBLE);
+                imgBtnSoundOff.setVisibility(View.VISIBLE);
+                mp.setVolume(0,0);
+                mp_click.setVolume(0,0);
+                Intent svc=new Intent(ActivityOrganDetail.this, BackgroundService.class);
+                stopService(svc); //OR stopService(svc);
+                editor.putInt("suara", 0);
+                editor.apply(); // commit changes
+            }
+        });
+
+        imgBtnSoundOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mp_click.start();
+                imgBtnSoundOn.setVisibility(View.VISIBLE);
+                imgBtnSoundOff.setVisibility(View.INVISIBLE);
+                mp.setVolume(1,1);
+                mp_click.setVolume(1,1);
+                Intent svc=new Intent(ActivityOrganDetail.this, BackgroundService.class);
+                startService(svc); //OR stopService(svc);
+                editor.putInt("suara", 1);
+                editor.apply(); // commit changes
+            }
+        });
 
 
 

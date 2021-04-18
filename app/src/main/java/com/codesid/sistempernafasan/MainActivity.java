@@ -3,6 +3,7 @@ package com.codesid.sistempernafasan;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        imgBtnSoundOff.setVisibility(View.INVISIBLE);
+
         MediaPlayer mp = MediaPlayer.create(this, R.raw.opening);
         mp_click = MediaPlayer.create(this, R.raw.click1);
         mp.start();
@@ -39,9 +40,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        imgBtnSoundOn.setVisibility(View.INVISIBLE);
+        imgBtnSoundOff.setVisibility(View.INVISIBLE);
 
         ImageView imgbtnStart = findViewById(R.id.imgBtn_start);
+
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+
 
         Intent svc=new Intent(this, BackgroundService.class);
         startService(svc); //OR stopService(svc);
@@ -71,6 +76,12 @@ public class MainActivity extends AppCompatActivity {
                 imgBtnSoundOn.setVisibility(View.INVISIBLE);
                 imgBtnSoundOff.setVisibility(View.VISIBLE);
                 mp.setVolume(0,0);
+                mp_click.setVolume(0,0);
+                Intent svc=new Intent(MainActivity.this, BackgroundService.class);
+                stopService(svc); //OR stopService(svc);
+                editor.putInt("suara", 0);
+                editor.apply(); // commit changes
+
             }
         });
 
@@ -81,7 +92,11 @@ public class MainActivity extends AppCompatActivity {
                 imgBtnSoundOn.setVisibility(View.VISIBLE);
                 imgBtnSoundOff.setVisibility(View.INVISIBLE);
                 mp.setVolume(1,1);
-
+                mp_click.setVolume(1,1);
+                Intent svc=new Intent(MainActivity.this, BackgroundService.class);
+                startService(svc); //OR stopService(svc);
+                editor.putInt("suara", 1);
+                editor.apply(); // commit changes
             }
         });
 
