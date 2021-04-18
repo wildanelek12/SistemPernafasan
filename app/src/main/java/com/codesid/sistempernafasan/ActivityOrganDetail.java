@@ -88,14 +88,19 @@ public class ActivityOrganDetail extends AppCompatActivity {
         if (suara==1){
             imgBtnSoundOn.setVisibility(View.VISIBLE);
             imgBtnSoundOff.setVisibility(View.INVISIBLE);
-            mp.setVolume(1,1);
+            if (mp!=null){
+                mp.setVolume(1,1);
+            }
             mp_click.setVolume(1,1);
             Intent svc=new Intent(ActivityOrganDetail.this, BackgroundService.class);
             startService(svc); //OR stopService(svc);
         }else {
             imgBtnSoundOn.setVisibility(View.INVISIBLE);
             imgBtnSoundOff.setVisibility(View.VISIBLE);
-            mp.setVolume(0,0);
+
+            if (mp!=null){
+                mp.setVolume(1,1);
+            }
             mp_click.setVolume(0,0);
             Intent svc=new Intent(ActivityOrganDetail.this, BackgroundService.class);
             stopService(svc); //OR stopService(svc);

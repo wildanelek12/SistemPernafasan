@@ -39,6 +39,7 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
 
     int index = 0;
     int score =0;
+    int suara;
     private final String[] question = {
             "Urutan jalannya udara pernapasan dari luar ke dalam tubuh yang benar adalah…",
             "Jumlah lobus pada paru-paru kanan dan paru-paru kiri manusia adalah….",
@@ -128,18 +129,22 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
             });
         SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
-        int suara = prefs.getInt("suara", 1); //0 is the default value.
+         suara = prefs.getInt("suara", 1); //0 is the default value.
         if (suara==1){
             imgBtnSoundOn.setVisibility(View.VISIBLE);
             imgBtnSoundOff.setVisibility(View.INVISIBLE);
-            mp.setVolume(1,1);
+            if (mp!=null) {
+                mp.setVolume(0, 0);
+            }
             mp_click2.setVolume(1,1);
             Intent svc=new Intent(ActivityEvaluasiSoal.this, BackgroundService.class);
             startService(svc); //OR stopService(svc);
         }else {
             imgBtnSoundOn.setVisibility(View.INVISIBLE);
             imgBtnSoundOff.setVisibility(View.VISIBLE);
-            mp.setVolume(0,0);
+            if (mp!=null) {
+                mp.setVolume(0, 0);
+            }
             mp_click2.setVolume(0,0);
             Intent svc=new Intent(ActivityEvaluasiSoal.this, BackgroundService.class);
             stopService(svc); //OR stopService(svc);
@@ -185,10 +190,16 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
                 mp_click.start();
                 answer[index] = "a";
                 _setQuestion();
+
                 if (answer[index].equals(key[index])){
                     stopPlaying();
                     mp = MediaPlayer.create(ActivityEvaluasiSoal.this,R.raw.correct);
                     mp.start();
+                    if (suara==1){
+                        mp.setVolume(1,1);
+                    }else {
+                        mp.setVolume(0,0);
+                    }
                     new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
                             .setTitleText("Yeay, Benar!")
                             .setContentText("Jawaban anda benar")
@@ -201,6 +212,11 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
                     stopPlaying();
                     mp = MediaPlayer.create(ActivityEvaluasiSoal.this,R.raw.wrong);
                     mp.start();
+                    if (suara==1){
+                        mp.setVolume(1,1);
+                    }else {
+                        mp.setVolume(0,0);
+                    }
                     new SweetAlertDialog(this, SweetAlertDialog.ERROR_TYPE)
                             .setTitleText("Yahhh!")
                             .setContentText("Jawaban benar adalah "+key[index].toUpperCase())
@@ -219,6 +235,11 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
                     stopPlaying();
                     mp = MediaPlayer.create(ActivityEvaluasiSoal.this,R.raw.correct);
                     mp.start();
+                    if (suara==1){
+                        mp.setVolume(1,1);
+                    }else {
+                        mp.setVolume(0,0);
+                    }
                     new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
                             .setTitleText("Yeay, Benar!")
                             .setContentText("Jawaban anda benar")
@@ -248,6 +269,11 @@ public class ActivityEvaluasiSoal extends AppCompatActivity {
                     stopPlaying();
                     mp = MediaPlayer.create(ActivityEvaluasiSoal.this,R.raw.correct);
                     mp.start();
+                    if (suara==1){
+                        mp.setVolume(1,1);
+                    }else {
+                        mp.setVolume(0,0);
+                    }
                     new SweetAlertDialog(this, SweetAlertDialog.SUCCESS_TYPE)
                             .setTitleText("Yeay, Benar!")
                             .setContentText("Jawaban anda benar")

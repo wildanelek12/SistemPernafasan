@@ -35,8 +35,6 @@ public class VideoPlayActivity extends AppCompatActivity {
             public void onClick(View view) {
                 mp_click.start();
                 finish();
-                Intent svc=new Intent(VideoPlayActivity.this, BackgroundService.class);
-                startService(svc); //OR stopService(svc);
 
             }
         });

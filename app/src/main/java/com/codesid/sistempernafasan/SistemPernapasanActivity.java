@@ -58,7 +58,8 @@ public class SistemPernapasanActivity extends AppCompatActivity {
         btnPreviousSistemPernapasan.setVisibility(View.GONE);
 
         MediaPlayer mp_click = MediaPlayer.create(this, R.raw.click1);
-
+        mp = MediaPlayer.create(this, R.raw.sistem_pernapasan1);
+        mp.start();
         SharedPreferences prefs = getSharedPreferences("MyPref", MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         int suara = prefs.getInt("suara", 1); //0 is the default value.
@@ -77,8 +78,7 @@ public class SistemPernapasanActivity extends AppCompatActivity {
             Intent svc=new Intent(SistemPernapasanActivity.this, BackgroundService.class);
             stopService(svc); //OR stopService(svc);
         }
-        mp = MediaPlayer.create(this, R.raw.sistem_pernapasan1);
-        mp.start();
+
         btnNextSistemPernapasan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -97,14 +97,18 @@ public class ActivityKhususFaring extends AppCompatActivity {
         if (suara==1){
             imgBtnSoundOn.setVisibility(View.VISIBLE);
             imgBtnSoundOff.setVisibility(View.INVISIBLE);
-            mp.setVolume(1,1);
+            if (mp!=null){
+                mp.setVolume(1,1);
+            }
             mp_click.setVolume(1,1);
             Intent svc=new Intent(ActivityKhususFaring.this, BackgroundService.class);
             startService(svc); //OR stopService(svc);
         }else {
             imgBtnSoundOn.setVisibility(View.INVISIBLE);
             imgBtnSoundOff.setVisibility(View.VISIBLE);
-            mp.setVolume(0,0);
+            if (mp!=null){
+                mp.setVolume(1,1);
+            }
             mp_click.setVolume(0,0);
             Intent svc=new Intent(ActivityKhususFaring.this, BackgroundService.class);
             stopService(svc); //OR stopService(svc);
@@ -120,6 +124,12 @@ public class ActivityKhususFaring extends AppCompatActivity {
             btnPreviousSistemPernapasanKhusus.setVisibility(View.GONE);
             mp = MediaPlayer.create(ActivityKhususFaring.this, R.raw.hidung);
             mp.start();
+
+            if (suara==1){
+                mp.setVolume(1,1);
+            }else {
+                mp.setVolume(0,0);
+            }
             btnNextSistemPernapasanKhsus.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -148,6 +158,11 @@ public class ActivityKhususFaring extends AppCompatActivity {
             btnPreviousSistemPernapasanKhusus.setVisibility(View.GONE);
             mp = MediaPlayer.create(ActivityKhususFaring.this, R.raw.laring1);
             mp.start();
+            if (suara==1){
+                mp.setVolume(1,1);
+            }else {
+                mp.setVolume(0,0);
+            }
             btnNextSistemPernapasanKhsus.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -184,6 +199,11 @@ public class ActivityKhususFaring extends AppCompatActivity {
             btnPreviousSistemPernapasanKhusus.setVisibility(View.GONE);
             mp = MediaPlayer.create(ActivityKhususFaring.this, R.raw.faring);
             mp.start();
+            if (suara==1){
+                mp.setVolume(1,1);
+            }else {
+                mp.setVolume(0,0);
+            }
             btnNextSistemPernapasanKhsus.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
