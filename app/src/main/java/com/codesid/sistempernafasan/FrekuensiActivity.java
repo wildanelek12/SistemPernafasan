@@ -42,7 +42,7 @@ public class FrekuensiActivity extends AppCompatActivity {
             "Semakin bertambah umur seseorang maka semakin rendah frekuensi pernapasannya. \n",
             "Pada umumnya laki-laki lebih banyak bergerak sehingga lebih banyak memerlukan energi. Jadi, Kebutuhan O<sub>2</sub>\n" +
                     "dan produksi CO<sub>2</sub> pada laki-laki lebih tinggi dibandingkan perempuan.\n",
-            "Semakin tinggi suhu tubuh ,maka semakin cepat frekuensi pernapasannya. Hal ini terjadi karena adanya peningkatan metabolisme tubuh, sehingga pemasukan O<sub>2</sub> dan produksi CO<sub>2</sub>.\n",
+            "Semakin tinggi suhu tubuh ,maka semakin cepat frekuensi pernapasannya. Hal ini terjadi karena adanya peningkatan metabolisme tubuh, sehingga pemasukan O<sub>2</sub> dan produksi CO<sub>2</sub> juga semakin tinggi.\n",
             "Frekuensi pernapasan saat berdiri lebih banyak jika dibandingkan saat duduk atau berbaring. Pada saat berdiri, otot-otot kaki akan berkontraksi untuk menghasilkan tenaga yang diperlukan tubuh untuk tetap tegak berdiri. Sedangkan pada saat posisi tubuh duduk atau berbaring, beban berat tubuh disangga oleh sebagian besar tubuh sehingga tubuh tidak memerlukan banyak energi.\n",
             "Orang yang melakukan banyak aktivitas  memerlukan lebih banyak energi. Ketika tubuh membutuhkan banyak energi maka tubuh perlu lebih banyak oksigen sehingga frekuensi pernapasan meningkat.\n",
     };

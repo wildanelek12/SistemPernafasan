@@ -41,11 +41,11 @@ public class VolumeActivity extends AppCompatActivity {
 
     String volumePernapasan [] = {
                     "Volume udara yang keluar masuk paru-paru saat tubuh melakukan inspirasi atau ekspirasi biasa (normal), volumenya sekitar 500 mL.\n",
-                    "Volume udara yang masih dapat dikeluarkan secara maksimal dari paru-paru setelah melakukan ekspirasi biasa.volumenya sekitar 1500 mL \n",
+                    "Volume udara yang masih dapat dikeluarkan secara maksimal dari paru-paru secara maksimal setelah melakukan ekspirasi biasa.volumenya sekitar 1500 mL \n",
                     "Volume udara yang masih dapat dimasukkan ke dalam paru-paru setelah melakukan inspirasi secara biasa. volumenya sekitar 1500 mL\n",
                     "Volume udara yang masih tersisa di dalam paru-paru meskipun telah melakukan ekspirasi secara maksimal,volumenya sekitar 1000 mL\n",
                     "Total dari volume tidal + volume cadangan ekspirasi + volume cadangan inspirasi,volumenya sekitar  3500 mL",
-                    "Volume udara yang dapat ditampung secara maksimal dalam paru-paru. Merupakan total dari volume kapasitas vital paru-paru volume residu,volumenya sekitar 4500 mL\n"
+                    "Volume udara yang dapat ditampung secara maksimal dalam paru-paru. Merupakan total dari volume kapasitas vital paru-paru + volume residu,volumenya sekitar 4500 mL\n"
     };
 
     @Override

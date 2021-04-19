@@ -45,15 +45,15 @@ public class MekanismeActivity extends AppCompatActivity {
     String judulMekanisme2 []={"Pernapasan dada terjadi karena aktivitas otot antar tulang rusuk. \n","Pernapasan perut terjadi karena aktivitas otot diafragma.\n"};
     String penjelasanMekanisme [] ={
 
-                "Otot-otot antartulang rusuk berkontraksi \n" +
+                "Otot-otot antartulang rusuk berkontraksi → \n" +
                         "Tulang rusuk terangkat → volume rongga dada membesar → tekanan udara paru-paru kecil → udara masuk paru-paru \n",
-                    "Otot-otot antartulang rusuk relaksasi \n" +
+                    "Otot-otot antartulang rusuk relaksasi → \n" +
                             "Tulang rusuk turun → volume rongga dada mengecil → tekanan paru-paru membesar → udara terdorong keluar\n",
 
-                "Otot diaframa berkontraksi (mendatar) \n" +
+                "Otot diaframa berkontraksi (mendatar) → \n" +
                         "volume rongga dada membesar → tekanan udara paru-paru kecil → udara masuk ke paru-paru \n",
 
-                    "Otot diaframa relaksasi (melengkung) \n" +
+                    "Otot diaframa relaksasi (melengkung) → \n" +
                             "volume rongga dada mengecil  →  tekanan paru-paru membesar →  udara terdorong keluar.\n"
 
     };

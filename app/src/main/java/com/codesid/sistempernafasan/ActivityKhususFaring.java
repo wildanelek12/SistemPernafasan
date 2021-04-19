@@ -39,11 +39,11 @@ public class ActivityKhususFaring extends AppCompatActivity {
            "Laring atau ruang suara merupakan organ pernapasan yang menghubungkan faring dengan trakea.\n" +
                    "\n" +
                    "Di dalam laring terdapat epiglotis dan pita suara. \n" +
-                   "Epiglotis berupa katup tulang rawan yang berbentuk seperti daun dilapisi oleh sel-sel epitel, berfungsi untuk menutup laring sewaktu menelan makanan atau minuman. Apabila partikel asing masuk ke laring, akan terjadi refleks batuk untuk mengekuarkannya.\n" +
+                   "Epiglotis berupa katup tulang rawan yang berbentuk seperti daun dilapisi oleh sel-sel epitel, berfungsi untuk menutup laring sewaktu menelan makanan atau minuman. Apabila partikel asing masuk ke laring, akan terjadi refleks batuk untuk mengeluarkannya.\n" +
                    "Udara yang melewati laring dapat menggetarkan pita suara, sehingga menghasilkan gelombang suara . \n",
             "Tinggi rendahnya suara dikontrol oleh tegangan pita suara.\n" +
-                    "Apabila pita suara tegang akibat tertarik oleh otot, pita suara akan bergetar lebih cepat dan dihasilkan nada suara yang tinggi. \n" +
-                    "Berkurangnya tegangan pada pita suara akan menyebabkan pita suara bergetar lebih lamban, sehingga menghasilkan nada suara yang rendah.\n"
+                    "•Apabila pita suara tegang akibat tertarik oleh otot, pita suara akan bergetar lebih cepat dan dihasilkan nada suara yang tinggi. \n" +
+                    "•Berkurangnya tegangan pada pita suara akan menyebabkan pita suara bergetar lebih lamban, sehingga menghasilkan nada suara yang rendah.\n"
 
     };
     String penjelasanOrganHidung[]={

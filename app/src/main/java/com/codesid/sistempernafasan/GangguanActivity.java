@@ -38,23 +38,23 @@ public class GangguanActivity extends AppCompatActivity {
 
 
     String penjelasanGangguan[]={
-            "Penyakit yang disebabkan oleh infeksi Influenza virus. Gejala umum influenza yaitu, demam dengan suhu lebih dari 39o C, pilek, bersin-bersin, batuk, sakit kepala, sakit otot, dan rongga hidung terasa gatal. Dengan kondisi hidung tersumbat, penderita influenza akan kesulitan untuk bernapas. \n" +
+            "Penyakit yang disebabkan oleh infeksi <i>Influenza virus</i>. Gejala umum influenza yaitu, demam dengan suhu lebih dari 39<sup>o</sup> C, pilek, bersin-bersin, batuk, sakit kepala, sakit otot, dan rongga hidung terasa gatal. Dengan kondisi hidung tersumbat, penderita influenza akan kesulitan untuk bernapas. \n" +
                     "\n" +
                     "Agar kamu tidak mudah tertular virus influenza, sebaiknya kamu selalu menggunakan masker ketika berkendaraan dan rajin mencuci tangan dengan menggunakan sabun sebelum makan.\n",
 
-            "Secara normal, tonsil (amandel) akan menyaring virus dan bakteri yang akan masuk ke dalam tubuh. Apabila daya tahan tubuh lemah, virus dan bakteri akan menginfeksi tonsil sehingga dapat menyebabkan penyakit tonsilitis. Virus yang dapat menyebabkan tonsilitis yaitu Adenovirus, Rhinovirus, Influenza, dan Corona virus. Golongan bakteri yang menyebabkan tonsilitis pada umumnya bakteri Streptococcus.\n" +
+            "Secara normal, tonsil (amandel) akan menyaring virus dan bakteri yang akan masuk ke dalam tubuh. Apabila daya tahan tubuh lemah, virus dan bakteri akan menginfeksi tonsil sehingga dapat menyebabkan penyakit tonsilitis. Virus yang dapat menyebabkan tonsilitis yaitu <i>Adenovirus, Rhinovirus, Influenza</i>, dan <i>Corona virus</i>. Golongan bakteri yang menyebabkan tonsilitis pada umumnya bakteri <i>Streptococcus</i>.\n" +
                     " \n" +
                     "Gejala tonsilitis yaitu sakit tenggorokan, tonsil mengalami peradangan, batuk, sakit kepala, sakit pada bagian leher atau telinga, dan demam. \n",
 
-            "Faringitis adalah infeksi  yang terjadi pada faring karena virus, bakteri, jamur, dan zat kimia. Virus yang dapat menyebabkan faringitis misalnya, Adenovirus, Orthomyxovirus, Rhinovirus, dan Coronavirus. Salah satu bakteri yang dapat menginfeksi faring yaitu Streptococcus pyogenes. \n" +
+            "Faringitis adalah infeksi  yang terjadi pada faring karena virus, bakteri, jamur, dan zat kimia. Virus yang dapat menyebabkan faringitis misalnya, <i>Adenovirus, Orthomyxovirus, Rhinovirus, </i> dan <i>Corona virus</i>. Salah satu bakteri yang dapat menginfeksi faring yaitu <i>Streptococcus pyogenes</i>. \n" +
                     " \n" +
                     "Penanganan faringitis yaitu dengan memberi antibiotik dan anti-fungi untuk membunuh bakteri serta jamur yang menginfeksi faring.\n",
 
-            "Pneumonia merupakan infeksi  yang terjadi pada bronkiolus dan alveolus oleh virus, bakteri, jamur, dan parasit lainnya . Pada umumnya , pneumonia disebabkan oleh bakteri Streptococcus pneumoniae. Pada paru-paru penderita pneumonia, terdapat cairan kental yang dapat mengganggu pertukaran gas pada paru-paru. \n" +
+            "Pneumonia merupakan infeksi  yang terjadi pada bronkiolus dan alveolus oleh virus, bakteri, jamur, dan parasit lainnya . Pada umumnya , pneumonia disebabkan oleh bakteri <i>Streptococcus pneumoniae</i>. Pada paru-paru penderita pneumonia, terdapat cairan kental yang dapat mengganggu pertukaran gas pada paru-paru. \n" +
                     "\n" +
                     "Gejala dari penyakit pneumonia yaitu demam, batuk berdahak, tidak enak badan, sakit pada bagian dada, dan terkadang mengalami kesulitan bernapas. Penanganan pneumonia dilakukan dengan memberikan antibiotik, bronkodilator, terapi oksigen, dan penyedotan cairan dalam paru-paru.\n",
 
-            "Penyakit TBC disebabkan oleh infeksi bakteri Mycobacterium tuberculosis. Gejala dari penyakit TBC yaitu mudah lelah, berat badan turun drastis, lesu, hilang nafsu makan, demam, berkeringat di malam hari, sulit bernapas, sakit pada bagian dada, dan batuk berdarah.\n",
+            "Penyakit TBC disebabkan oleh infeksi bakteri <i>Mycobacterium tuberculosis</i>. Gejala dari penyakit TBC yaitu mudah lelah, berat badan turun drastis, lesu, hilang nafsu makan, demam, berkeringat di malam hari, sulit bernapas, sakit pada bagian dada, dan batuk berdarah.\n",
 
             "Asma merupakan salah satu kelainan yang menyerang saluran pernapasan. Asma dapat disebabkan oleh faktor lingkungan atau masuknya zat pemicu alergi (alergen) dalam tubuh, misalnya asap rokok, debu, bulu hewan peliharaan, dan lain-lain. Masuknya alergen akan memicu tubuh untuk menghasilkan senyawa kimia seperti prostaglandin dan histamin yang dapat memicu penyempitan saluran pernapasan.\n" +
                     " \n" +
