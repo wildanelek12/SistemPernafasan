@@ -88,7 +88,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/comforta_bold"
         android:lineSpacingExtra="@dimen/_2sdp"
-        android:text=" Hindun Mar’atus Sholihah\n I Wayan Sumberartha, M.Si.,\n Drs. Fajar Marsuki, S.Pd., M.Sc."
+        android:text=" Hindun Mar’atus Sholihah\n Drs. I  Wayan Sumberartha, M.Sc. \n M. Fajar Marsuki, S.Pd., M.Sc."
         android:textColor="@color/white"
         android:textSize="@dimen/_12ssp"
         app:layout_constraintStart_toEndOf="@+id/textView4"

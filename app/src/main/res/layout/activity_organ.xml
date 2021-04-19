@@ -33,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/comforta_bold"
-            android:text="Organ Sistem Pernafasan"
+            android:text="Organ Sistem Pernapasan"
             android:textSize="@dimen/_20ssp"
             android:textColor="#2d2d2d"
             app:layout_constraintBottom_toTopOf="@+id/imageView7"
@@ -41,7 +41,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comforta_regular"
+            android:text="Klik bagian organ berikut untuk penjelasan lebih lanjut !"
+            android:textColor="#2d2d2d"
+            app:layout_constraintBottom_toTopOf="@+id/imageView7"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="@dimen/_450sdp"

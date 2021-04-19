@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -85,7 +86,7 @@ public class GangguanActivity extends AppCompatActivity {
         setContentView(R.layout.activity_gangguan);
 
         ButterKnife.bind(this);
-        txtGangguan.setText(penjelasanGangguan[index]);
+        txtGangguan.setText(Html.fromHtml(penjelasanGangguan[index]));
         judulGangguan.setText(namaGangguan[index]);
         imgGangguan.setImageResource(gambarGangguan[index]);
         btnPreviousPageGangguan.setVisibility(View.INVISIBLE);
@@ -127,7 +128,7 @@ public class GangguanActivity extends AppCompatActivity {
                 if (index==6){
                     btnNextPageGangguan.setVisibility(View.INVISIBLE);
                     btnPreviousPageGangguan.setVisibility(View.VISIBLE);
-                    txtGangguan.setText(penjelasanGangguan[index]);
+                    txtGangguan.setText(Html.fromHtml(penjelasanGangguan[index]));
                     judulGangguan.setText(namaGangguan[index]);
                     imgGangguan.setImageResource(gambarGangguan[index]);
                     stopPlaying();
@@ -136,7 +137,7 @@ public class GangguanActivity extends AppCompatActivity {
                 }else if (index==0){
                     btnNextPageGangguan.setVisibility(View.VISIBLE);
                     btnPreviousPageGangguan.setVisibility(View.INVISIBLE);
-                    txtGangguan.setText(penjelasanGangguan[index]);
+                    txtGangguan.setText(Html.fromHtml(penjelasanGangguan[index]));
                     judulGangguan.setText(namaGangguan[index]);
                     imgGangguan.setImageResource(gambarGangguan[index]);
                     stopPlaying();
@@ -145,7 +146,7 @@ public class GangguanActivity extends AppCompatActivity {
                 }else {
                     btnNextPageGangguan.setVisibility(View.VISIBLE);
                     btnPreviousPageGangguan.setVisibility(View.VISIBLE);
-                    txtGangguan.setText(penjelasanGangguan[index]);
+                    txtGangguan.setText(Html.fromHtml(penjelasanGangguan[index]));
                     judulGangguan.setText(namaGangguan[index]);
                     imgGangguan.setImageResource(gambarGangguan[index]);
                     stopPlaying();
@@ -168,7 +169,7 @@ public class GangguanActivity extends AppCompatActivity {
                 if (index==6){
                     btnNextPageGangguan.setVisibility(View.INVISIBLE);
                     btnPreviousPageGangguan.setVisibility(View.VISIBLE);
-                    txtGangguan.setText(penjelasanGangguan[index]);
+                    txtGangguan.setText(Html.fromHtml(penjelasanGangguan[index]));
                     judulGangguan.setText(namaGangguan[index]);
                     imgGangguan.setImageResource(gambarGangguan[index]);
                     stopPlaying();
@@ -177,7 +178,7 @@ public class GangguanActivity extends AppCompatActivity {
                 }else if (index==0){
                     btnNextPageGangguan.setVisibility(View.VISIBLE);
                     btnPreviousPageGangguan.setVisibility(View.INVISIBLE);
-                    txtGangguan.setText(penjelasanGangguan[index]);
+                    txtGangguan.setText(Html.fromHtml(penjelasanGangguan[index]));
                     judulGangguan.setText(namaGangguan[index]);
                     imgGangguan.setImageResource(gambarGangguan[index]);
                     stopPlaying();
@@ -186,7 +187,7 @@ public class GangguanActivity extends AppCompatActivity {
                 }else {
                     btnNextPageGangguan.setVisibility(View.VISIBLE);
                     btnPreviousPageGangguan.setVisibility(View.VISIBLE);
-                    txtGangguan.setText(penjelasanGangguan[index]);
+                    txtGangguan.setText(Html.fromHtml(penjelasanGangguan[index]));
                     judulGangguan.setText(namaGangguan[index]);
                     imgGangguan.setImageResource(gambarGangguan[index]);
                     stopPlaying();
