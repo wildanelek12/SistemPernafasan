@@ -14,7 +14,7 @@
         android:layout_marginTop="@dimen/_30sdp"
         android:textAlignment="center"
         android:fontFamily="@font/comforta_bold"
-        android:text="Apakah kamu ingin keluar"
+        android:text="Apakah kamu ingin keluar?"
         android:textColor="#2d2d2d"
         android:textSize="@dimen/_16ssp"
         app:layout_constraintEnd_toEndOf="parent"
