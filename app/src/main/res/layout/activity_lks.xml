@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ActivityOrgan"
-    android:background="@drawable/frame_materi2">
+    android:background="@drawable/bg3">
 
 
     <ImageView
@@ -28,19 +28,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <ImageView
             android:id="@+id/textView"
-            android:layout_width="match_parent"
+            android:layout_width="@dimen/_450sdp"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/comforta_bold"
-            android:text="Organ Sistem Pernafasan"
-            android:textSize="@dimen/_20ssp"
-            android:textColor="#2d2d2d"
+            android:src="@drawable/jdl_organ"
             app:layout_constraintBottom_toTopOf="@+id/imageView7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+        <ImageView
+            android:id="@+id/textView22"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/jdl_organ2"
+            android:layout_marginTop=""
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageView
             android:id="@+id/imageView7"
