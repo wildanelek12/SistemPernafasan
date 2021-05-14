@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ActivityEvaluasiSoal"
-    android:background="@drawable/soal_frame">
+    android:background="@drawable/bg_soal">
 
     <ImageView
         android:id="@+id/btnBackEvaluasiSoal"
@@ -18,15 +18,14 @@
         android:background="@drawable/btn_back"/>
     <TextView
         android:id="@+id/txtSoal"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/_410sdp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/_70sdp"
-        android:layout_marginBottom="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_60sdp"
         android:fontFamily="@font/comforta_regular"
         android:text="1. Apa yang dimaksud bacot?"
         android:textColor="#2d2d2d"
         android:textSize="@dimen/_12ssp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
