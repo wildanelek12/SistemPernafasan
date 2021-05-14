@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".VolumeActivity"
-    android:background="@drawable/frame_tes">
+    android:background="@drawable/bg1">
 
 
     <ImageView
@@ -27,14 +27,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <ImageView
             android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/comforta_bold"
-            android:text="Volume Pernapasan"
-            android:textSize="@dimen/_18ssp"
-            android:textColor="#2d2d2d"
+            android:layout_width="@dimen/_450sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/jdl_volume_pernapasan"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -43,8 +40,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout3"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/_223sdp"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_height="@dimen/_260sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
             tools:layout_editor_absoluteX="0dp">
@@ -52,19 +49,15 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/btnVolumeTidal"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_26sdp"
+                android:layout_height="@dimen/_28sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:background="@drawable/border_organ"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/comforta_bold"
-                    android:text="Volume Tidal"
-                    android:textColor="#2d2d2d"
-                    android:textSize="@dimen/_13ssp"
+                    android:src="@drawable/btn_volume1"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -75,22 +68,16 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/btnVolumeCadanganEkspirasi"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_41sdp"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:background="@drawable/border_organ"
+                android:layout_height="@dimen/_33sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
                 app:layout_constraintStart_toStartOf="@+id/btnVolumeTidal"
                 app:layout_constraintTop_toBottomOf="@+id/btnVolumeTidal">
 
-                <TextView
-
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/comforta_bold"
-                    android:text="Volume Cadangan Ekspirasi (Suplementer)"
-                    android:textSize="@dimen/_10ssp"
-                    android:textColor="#2d2d2d"
-                    android:textAlignment="center"
+                    android:src="@drawable/btn_volume2"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -102,22 +89,17 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/btnVolumeCadanganKomplementer"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:background="@drawable/border_organ"
+                android:layout_height="@dimen/_33sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
                 app:layout_constraintStart_toStartOf="@+id/btnVolumeTidal"
                 app:layout_constraintTop_toBottomOf="@+id/btnVolumeCadanganEkspirasi">
 
-                <TextView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/comforta_bold"
-                    android:textAlignment="center"
-                    android:text="Volume Cadangan (Komplementer)"
-                    android:textSize="@dimen/_10ssp"
+                    android:src="@drawable/btn_volume3"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    android:textColor="#2d2d2d"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -128,22 +110,18 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/btnVolumeResidu"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_26sdp"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:background="@drawable/border_organ"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
                 app:layout_constraintStart_toStartOf="@+id/btnVolumeTidal"
                 app:layout_constraintTop_toBottomOf="@+id/btnVolumeCadanganKomplementer">
 
-                <TextView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/comforta_bold"
-                    android:text="Volume Residu"
-                    android:textSize="@dimen/_12ssp"
+                    android:src="@drawable/btn_volume4"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:textColor="#2d2d2d"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -153,24 +131,18 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/btnVitalParu"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:background="@drawable/border_organ"
+                android:layout_height="@dimen/_33sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
                 app:layout_constraintStart_toStartOf="@+id/btnVolumeTidal"
                 app:layout_constraintTop_toBottomOf="@+id/btnVolumeResidu">
 
-                <TextView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/comforta_bold"
-                    android:text="Kapasitas Vital Paru-Paru"
-                    android:textAlignment="center"
-                    android:textColor="#2d2d2d"
-                    android:textSize="@dimen/_11ssp"
+                    android:src="@drawable/btn_volume5"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
@@ -180,27 +152,20 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/btnKapasitasTotal"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:background="@drawable/border_organ"
+                android:layout_height="@dimen/_33sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
                 app:layout_constraintStart_toStartOf="@+id/btnVolumeTidal"
                 app:layout_constraintTop_toBottomOf="@+id/btnVitalParu">
 
-                <TextView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/comforta_bold"
-                    android:text="Kapasitas Total Paru-Paru"
-                    android:textSize="@dimen/_11ssp"
-                    android:textAlignment="center"
-                    android:textColor="#2d2d2d"
+                    android:src="@drawable/btn_volume6"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.454" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -208,28 +173,31 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="@dimen/_360sdp"
-            android:layout_height="@dimen/_200sdp"
+            android:layout_width="@dimen/_375sdp"
+            android:layout_height="@dimen/_260sdp"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:background="@drawable/border_organ"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
             app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
 
-            <TextView
-
-                android:id="@+id/txtVolumePernapasan"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:lineSpacingExtra="@dimen/_6sdp"
-                android:layout_marginHorizontal="@dimen/_20sdp"
-                android:text="aksjdhakjsdhkajasdasdasdasddshasddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
-                android:textSize="@dimen/_13ssp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:textColor="#2d2d2d"
-                android:fontFamily="@font/comforta_regular"
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_120sdp"
+                android:src="@drawable/img_volume"
+                android:layout_marginTop="@dimen/_5sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/_370sdp"
+                android:layout_height="@dimen/_130sdp"
+                android:src="@drawable/card_volume1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

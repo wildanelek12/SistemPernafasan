@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ActivityOrgan"
-    android:background="@drawable/frame_materi2">
+    android:background="@drawable/bg3">
 
 
     <ImageView
@@ -28,57 +28,51 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <ImageView
             android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/comforta_bold"
-            android:text="Organ Sistem Pernapasan"
-            android:textSize="@dimen/_20ssp"
-            android:textColor="#2d2d2d"
-            app:layout_constraintBottom_toTopOf="@+id/imageView7"
+            android:layout_width="@dimen/_475sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/jdl_organ"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
+            android:id="@+id/klik"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/comforta_regular"
             android:text="Klik bagian organ berikut untuk penjelasan lebih lanjut !"
             android:textColor="#2d2d2d"
             app:layout_constraintBottom_toTopOf="@+id/imageView7"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
         <ImageView
             android:id="@+id/imageView7"
             android:layout_width="@dimen/_450sdp"
-            android:layout_height="@dimen/_200sdp"
-            android:layout_marginTop="@dimen/_50sdp"
-            android:src="@drawable/organges"
+            android:layout_height="@dimen/_230sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:src="@drawable/img_organ"
+            app:layout_constraintTop_toBottomOf="@+id/klik"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/btnHidung"
             android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_33sdp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_marginLeft="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_20sdp"
-            android:background="@drawable/border_organ"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/imageView7" >
 
-            <TextView
+            <ImageView
                 android:id="@+id/txtHidung"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/comforta_bold"
                 android:text="Hidung"
-
-                android:textColor="#2d2d2d"
-                android:textSize="@dimen/_14ssp"
+                android:src="@drawable/btn_hidung"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -89,20 +83,16 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/btnBronkus"
             android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_33sdp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/border_organ"
             app:layout_constraintStart_toStartOf="@+id/btnHidung"
             app:layout_constraintTop_toBottomOf="@+id/btnHidung" >
 
-            <TextView
+            <ImageView
                 android:id="@+id/txtBronkus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/comforta_bold"
-                android:text="Bronkus"
-                android:textColor="#2d2d2d"
-                android:textSize="@dimen/_14ssp"
+                android:src="@drawable/btn_bronkus"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -112,21 +102,17 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/btnBronkiolus"
             android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_33sdp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/border_organ"
             app:layout_constraintEnd_toEndOf="@+id/btnBronkus"
             app:layout_constraintStart_toStartOf="@+id/btnBronkus"
             app:layout_constraintTop_toBottomOf="@+id/btnBronkus" >
 
-            <TextView
+            <ImageView
                 android:id="@+id/txtBronkiolus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/comforta_bold"
-                android:text="Bronkiolus"
-                android:textColor="#2d2d2d"
-                android:textSize="@dimen/_14ssp"
+                android:src="@drawable/btn_bronkiolus"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -137,20 +123,16 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/btnAlveolus"
             android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_33sdp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/border_organ"
             app:layout_constraintEnd_toEndOf="@+id/btnBronkiolus"
             app:layout_constraintStart_toStartOf="@+id/btnBronkiolus"
             app:layout_constraintTop_toBottomOf="@+id/btnBronkiolus" >
-            <TextView
+            <ImageView
                 android:id="@+id/txtAlveolus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Alveolus"
-                android:fontFamily="@font/comforta_bold"
-                android:textColor="#2d2d2d"
-                android:textSize="@dimen/_14ssp"
+                android:src="@drawable/btn_alveolus"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -161,20 +143,16 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/btnFaring"
             android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_33sdp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_marginRight="@dimen/_33sdp"
-            android:background="@drawable/border_organ"
             app:layout_constraintBottom_toBottomOf="@+id/btnHidung"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/btnHidung" >
-            <TextView
+            <ImageView
                 android:id="@+id/txtFaring"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Faring"
-                android:fontFamily="@font/comforta_bold"
-                android:textSize="@dimen/_14ssp"
-                android:textColor="#2d2d2d"
+                android:src="@drawable/btn_faring"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -184,21 +162,18 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/btnLaring"
             android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_33sdp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/border_organ"
             app:layout_constraintEnd_toEndOf="@+id/btnFaring"
             app:layout_constraintStart_toStartOf="@+id/btnFaring"
             app:layout_constraintTop_toBottomOf="@+id/btnFaring" >
 
-            <TextView
+            <ImageView
                 android:id="@+id/txtLaring"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/comforta_bold"
-                android:text="Laring"
-                android:textColor="#2d2d2d"
-                android:textSize="@dimen/_14ssp"
+                android:src="@drawable/btn_laring"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -208,21 +183,17 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/btnTrakea"
             android:layout_width="@dimen/_100sdp"
-            android:layout_height="@dimen/_33sdp"
+            android:layout_height="@dimen/_40sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:background="@drawable/border_organ"
             app:layout_constraintEnd_toEndOf="@+id/btnLaring"
             app:layout_constraintStart_toStartOf="@+id/btnLaring"
             app:layout_constraintTop_toBottomOf="@+id/btnLaring" >
 
-            <TextView
+            <ImageView
                 android:id="@+id/txtTrakea"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/comforta_bold"
-                android:text="Trakea"
-                android:textColor="#2d2d2d"
-                android:textSize="@dimen/_14ssp"
+                android:src="@drawable/btn_trakea"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -234,19 +205,15 @@
             android:id="@+id/btnParu"
             android:layout_width="@dimen/_100sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_height="@dimen/_33sdp"
-            android:background="@drawable/border_organ"
+            android:layout_height="@dimen/_40sdp"
             app:layout_constraintEnd_toEndOf="@+id/btnTrakea"
             app:layout_constraintStart_toStartOf="@+id/btnTrakea"
             app:layout_constraintTop_toBottomOf="@+id/btnTrakea" >
-            <TextView
+            <ImageView
                 android:id="@+id/txtParu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Paru Paru"
-                android:fontFamily="@font/comforta_bold"
-                android:textSize="@dimen/_14ssp"
-                android:textColor="#2d2d2d"
+                android:src="@drawable/btn_paru"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

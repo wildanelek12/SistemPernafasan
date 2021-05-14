@@ -4,6 +4,7 @@
     package="com.codesid.sistempernafasan">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_logo"
@@ -12,9 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SistemPernafasan"
         tools:replace="icon">
-        <service android:enabled="true" android:name=".BackgroundService" />
-        <activity android:name=".ActivityKhususFaring"
-            android:screenOrientation="landscape"></activity>
+        <activity android:name=".GangguanDetailActivity"></activity>
+        <activity android:name=".MekanismeDragDropActivity" />
+        <activity android:name=".Mekanisme2Activity" />
+        <activity android:name=".SistemPernapasan2DragDrop" />
+        <activity android:name=".SistemPernapasan3" />
+
+        <service
+            android:name=".BackgroundService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".ActivityKhususFaring"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".GangguanActivity"
             android:screenOrientation="landscape" />

@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SistemPernapasanActivity"
-    android:background="@drawable/bg2">
-
+    tools:context=".Mekanisme2Activity"
+    android:background="@drawable/bg3">
 
 
     <ImageView
@@ -20,6 +19,7 @@
         android:background="@drawable/btn_back"/>
 
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="wrap_content"
@@ -29,54 +29,112 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
         <ImageView
-            android:id="@+id/textView"
+            android:id="@+id/judul"
             android:layout_width="@dimen/_475sdp"
             android:layout_height="@dimen/_22sdp"
-            android:src="@drawable/jdl_sistempernapasan"
-            app:layout_constraintBottom_toTopOf="@+id/imageView7"
+            android:src="@drawable/jdl_sistempernapasan" />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="@dimen/_476sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/comforta_bold"
+            android:text="Klik untuk penjelasan lebih lanjut!"
+            android:textColor="#2d2d2d"
+            android:textSize="@dimen/_18ssp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/judul" />
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout3"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_260sdp"
+            android:layout_width="@dimen/_238sdp"
+            android:layout_height="@dimen/_180sdp"
             android:layout_marginTop="@dimen/_10sdp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView">
 
 
             <ImageView
-                android:id="@+id/imgGif"
-                android:layout_width="@dimen/_175sdp"
-                android:layout_height="match_parent"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/b1"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                android:src="@drawable/jdl_pernapasan_dada"/>
+
+
+            <ImageView
+                android:id="@+id/b2"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/btn_pernapasan_dada_inspirasi"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/b1" />
+
+
+            <ImageView
+                android:id="@+id/b3"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/btn_pernapasan_dada_ekspirasi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/b2" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="@dimen/_300sdp"
-            android:layout_height="@dimen/_260sdp"
+            android:layout_width="@dimen/_238sdp"
+            android:layout_height="@dimen/_180sdp"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
             app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
 
+
+
+
             <ImageView
-                android:layout_width="@dimen/_285sdp"
-                android:layout_height="@dimen/_190sdp"
-                android:src="@drawable/card_sistem_pernapasan"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/bb1"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_10sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/jdl_pernapasan_perut"/>
+
+
+            <ImageView
+                android:id="@+id/bb2"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:src="@drawable/btn_pernapasan_perut_inspirasi"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bb1" />
+
+
+            <ImageView
+                android:id="@+id/bb3"
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/btn_pernapasan_perut_ekspirasi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bb2" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -127,5 +185,6 @@
         android:src="@drawable/sound_on"
         app:layout_constraintBottom_toTopOf="@+id/btnNextSistemPernapasan"
         app:layout_constraintEnd_toEndOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

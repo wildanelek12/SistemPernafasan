@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".VolumeActivity"
-    android:background="@drawable/frame_materi2">
+    android:background="@drawable/bg1">
 
 
     <ImageView
-        android:id="@+id/btnBackFrekuensi"
+        android:id="@+id/btnBackVolume"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_marginTop="@dimen/_5sdp"
@@ -27,14 +27,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <ImageView
             android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/comforta_bold"
-            android:textColor="#2d2d2d"
-            android:text="FAKTOR YANG MEMPENGARUHI FREKUENSI PERNAPASAN "
-            android:textSize="@dimen/_15ssp"
+            android:layout_width="@dimen/_450sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/jdl_volume_pernapasan"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -43,27 +40,25 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout3"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/_205sdp"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_height="@dimen/_260sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
             tools:layout_editor_absoluteX="0dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnFrekuensiUmur"
+                android:id="@+id/btnVolumeTidal"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_30sdp"
+                android:layout_height="@dimen/_28sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:background="@drawable/border_organ"
-                app:layout_constraintStart_toStartOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/comforta_bold"
-                    android:text="Umur"
-                    android:textColor="#2d2d2d"
-                    android:textSize="@dimen/_13ssp"
+                    android:src="@drawable/btn_faktor1"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -72,24 +67,18 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnFrekuensiJK"
+                android:id="@+id/btnVolumeCadanganEkspirasi"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:background="@drawable/border_organ"
-                app:layout_constraintEnd_toEndOf="@+id/btnFrekuensiUmur"
-                app:layout_constraintStart_toStartOf="@+id/btnFrekuensiUmur"
-                app:layout_constraintTop_toBottomOf="@+id/btnFrekuensiUmur">
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
+                app:layout_constraintStart_toStartOf="@+id/btnVolumeTidal"
+                app:layout_constraintTop_toBottomOf="@+id/btnVolumeTidal">
 
-                <TextView
-
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/comforta_bold"
-                    android:text="Jenis Kelamin"
-                    android:textColor="#2d2d2d"
-                    android:textSize="@dimen/_12ssp"
-                    android:textAlignment="center"
+                    android:src="@drawable/btn_faktor2"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -99,23 +88,18 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnFrekuensiSuhuTubuh"
+                android:id="@+id/btnVolumeCadanganKomplementer"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:background="@drawable/border_organ"
-                app:layout_constraintEnd_toEndOf="@+id/btnFrekuensiUmur"
-                app:layout_constraintStart_toStartOf="@+id/btnFrekuensiUmur"
-                app:layout_constraintTop_toBottomOf="@+id/btnFrekuensiJK">
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
+                app:layout_constraintStart_toStartOf="@+id/btnVolumeTidal"
+                app:layout_constraintTop_toBottomOf="@+id/btnVolumeCadanganEkspirasi">
 
-                <TextView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/comforta_bold"
-                    android:textAlignment="center"
-                    android:text="Suhu Tubuh"
-                    android:textColor="#2d2d2d"
-                    android:textSize="@dimen/_12ssp"
+                    android:src="@drawable/btn_faktor3"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -125,22 +109,18 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnFrekuensiPosisi"
+                android:id="@+id/btnVolumeResidu"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:background="@drawable/border_organ"
-                app:layout_constraintEnd_toEndOf="@+id/btnFrekuensiUmur"
-                app:layout_constraintStart_toStartOf="@+id/btnFrekuensiUmur"
-                app:layout_constraintTop_toBottomOf="@+id/btnFrekuensiSuhuTubuh">
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
+                app:layout_constraintStart_toStartOf="@+id/btnVolumeTidal"
+                app:layout_constraintTop_toBottomOf="@+id/btnVolumeCadanganKomplementer">
 
-                <TextView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/comforta_bold"
-                    android:text="Posisi Tubuh"
-                    android:textColor="#2d2d2d"
-                    android:textSize="@dimen/_12ssp"
+                    android:src="@drawable/btn_faktor4"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -150,62 +130,54 @@
 
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnFrekuensiKegiatan"
+                android:id="@+id/btnVitalParu"
                 android:layout_width="@dimen/_105sdp"
-                android:layout_height="@dimen/_38sdp"
-                android:layout_marginTop="@dimen/_6sdp"
-                android:background="@drawable/border_organ"
-                app:layout_constraintEnd_toEndOf="@+id/btnFrekuensiUmur"
-                app:layout_constraintStart_toStartOf="@+id/btnFrekuensiUmur"
-                app:layout_constraintTop_toBottomOf="@+id/btnFrekuensiPosisi">
+                android:layout_height="@dimen/_33sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/btnVolumeTidal"
+                app:layout_constraintStart_toStartOf="@+id/btnVolumeTidal"
+                app:layout_constraintTop_toBottomOf="@+id/btnVolumeResidu">
 
-                <TextView
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/comforta_bold"
-                    android:text="Kegiatan atau aktivitas tubuh"
-                    android:textSize="@dimen/_12ssp"
-                    android:textAlignment="center"
-                    android:textColor="#2d2d2d"
+                    android:src="@drawable/btn_faktor5"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.454" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="@dimen/_365sdp"
-            android:layout_height="@dimen/_205sdp"
+            android:layout_width="@dimen/_375sdp"
+            android:layout_height="@dimen/_260sdp"
             android:layout_marginLeft="@dimen/_10sdp"
-            android:background="@drawable/border_organ"
-           app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
-            app:layout_constraintTop_toTopOf="@+id/constraintLayout3"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
 
-            <TextView
-
-                android:id="@+id/txtFrekuensi"
+            <ImageView
+                android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/_20sdp"
-                android:lineSpacingExtra="@dimen/_6sdp"
-                android:text="aksjdhakjsdhkajasdasdasdasddshasddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
-                android:textSize="@dimen/_13ssp"
-                android:textColor="#2d2d2d"
-                android:fontFamily="@font/comforta_regular"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/card_faktor1"
+                android:layout_marginTop="@dimen/_5sdp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -230,6 +202,8 @@
         android:layout_marginRight="@dimen/_20sdp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+
 
 
 

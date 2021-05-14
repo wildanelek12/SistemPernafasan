@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SistemPernapasanActivity"
-    android:background="@drawable/frame_tes">
+    android:background="@drawable/bg3">
 
 
 
@@ -29,62 +29,67 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+
+        <ImageView
             android:id="@+id/txtNamaOrgan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/comforta_bold"
-            android:text="Organ Sistem Pernapasan"
-            android:textSize="@dimen/_18ssp"
-            android:textColor="#2d2d2d"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/jdl_hidung"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout3"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_230sdp"
+            android:layout_width="@dimen/_300sdp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sdp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtNamaOrgan">
 
 
             <ImageView
+                android:id="@+id/txtPenjelasanOrgan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/card_hidung"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/txtPenjelasanOrgan2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/card_hidung2"
+                app:layout_constraintEnd_toEndOf="@+id/txtPenjelasanOrgan"
+                app:layout_constraintStart_toStartOf="@+id/txtPenjelasanOrgan"
+                app:layout_constraintTop_toBottomOf="@+id/txtPenjelasanOrgan" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_230sdp"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
+
+            <ImageView
                 android:id="@+id/imgGambarOrgan"
                 android:layout_width="@dimen/_175sdp"
                 android:layout_height="match_parent"
+                android:src="@drawable/img_hidung"
+                android:layout_marginLeft="@dimen/_10sdp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="@dimen/_300sdp"
-            android:layout_height="@dimen/_230sdp"
-            app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
-            app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
-
-            <TextView
-                android:id="@+id/txtPenjelasanOrgan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="aksjdhakjsdhkajasdasdasdasddsh"
-                android:padding="@dimen/_20sdp"
-                android:textSize="@dimen/_11ssp"
-                android:justificationMode="inter_word"
-                android:fontFamily="@font/comforta_regular"
-                android:textColor="#2d2d2d"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

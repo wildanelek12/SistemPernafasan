@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SistemPernapasanActivity"
+    tools:context=".SistemPernapasan3"
     android:background="@drawable/bg2">
-
-
 
     <ImageView
         android:id="@+id/btnBackSistemPernapasan"
@@ -30,56 +28,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/textView"
-            android:layout_width="@dimen/_475sdp"
-            android:layout_height="@dimen/_22sdp"
-            android:src="@drawable/jdl_sistempernapasan"
-            app:layout_constraintBottom_toTopOf="@+id/imageView7"
+            android:layout_width="@dimen/_420sdp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/card_dragdrop"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout3"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_260sdp"
-            android:layout_marginTop="@dimen/_10sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView">
-
-
-            <ImageView
-                android:id="@+id/imgGif"
-                android:layout_width="@dimen/_175sdp"
-                android:layout_height="match_parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="@dimen/_300sdp"
-            android:layout_height="@dimen/_260sdp"
-            app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
-            app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
-
-            <ImageView
-                android:layout_width="@dimen/_285sdp"
-                android:layout_height="@dimen/_190sdp"
-                android:src="@drawable/card_sistem_pernapasan"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 

@@ -5,12 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SistemPernapasanActivity"
-    android:background="@drawable/frame_tes">
-
+    android:background="@drawable/bg1">
 
 
     <ImageView
-        android:id="@+id/btnBackGangguan"
+        android:id="@+id/textView"
+        android:layout_width="@dimen/_450sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/jdl_materi"
+        android:layout_marginTop="@dimen/_20sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnBackMateri"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_marginTop="@dimen/_5sdp"
@@ -20,121 +29,97 @@
         android:background="@drawable/btn_back"/>
 
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/btn_materi_pernapasan"
+        android:layout_width="@dimen/_125sdp"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/btn_gangguan1"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_materi_organ"
+        app:layout_constraintEnd_toStartOf="@+id/btn_materi_organ"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_materi_organ"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/btn_materi_organ"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_gangguan2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/txtJudulGangguan"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/comforta_bold"
-            android:text="Sistem Pernapasan"
-            android:textSize="@dimen/_18ssp"
-            android:textColor="#2d2d2d"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout3"
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/_225sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtJudulGangguan">
-
-
-            <ImageView
-                android:id="@+id/imgGangguan"
-                android:layout_width="@dimen/_175sdp"
-                android:layout_height="match_parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="@dimen/_300sdp"
-            android:layout_height="@dimen/_225sdp"
-            app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
-            app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
-
-            <TextView
-                android:id="@+id/txtGangguan"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/comforta_regular"
-                android:padding="@dimen/_20sdp"
-                android:textSize="@dimen/_11ssp"
-                android:justificationMode="inter_word"
-                android:text="aksjdhakjsdhkajasdasdasdasddsh"
-                android:textColor="#2d2d2d"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.503"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.497" />
-
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageView
-        android:id="@+id/btnPreviousPageGangguan"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginLeft="@dimen/_45sdp"
-        android:layout_marginBottom="@dimen/_30sdp"
-        android:src="@drawable/btn_backpage"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/btnNextPageGangguan"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="@dimen/_30sdp"
-        android:layout_marginRight="@dimen/_45sdp"
-        android:layout_marginBottom="@dimen/_30sdp"
-        android:src="@drawable/btn_nextpage"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/btn_materi_mekanisme"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_gangguan3"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_materi_organ"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnPreviousPageGangguan" />
+        app:layout_constraintStart_toEndOf="@+id/btn_materi_organ"
+        app:layout_constraintTop_toTopOf="@+id/btn_materi_organ" />
+
+    <ImageView
+        android:id="@+id/btn_materi_frekuensi"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_gangguan4"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_materi_volume"
+        app:layout_constraintEnd_toEndOf="@+id/btn_materi_pernapasan"
+        app:layout_constraintStart_toStartOf="@+id/btn_materi_pernapasan"
+        app:layout_constraintTop_toTopOf="@+id/btn_materi_volume" />
+
+    <ImageView
+        android:id="@+id/btn_materi_volume"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_gangguan5"
+        app:layout_constraintEnd_toEndOf="@+id/btn_materi_organ"
+        app:layout_constraintStart_toStartOf="@+id/btn_materi_organ"
+        app:layout_constraintTop_toBottomOf="@+id/btn_materi_organ" />
+
+    <ImageView
+        android:id="@+id/btn_materi_gangguan"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_gangguan6"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_materi_volume"
+        app:layout_constraintEnd_toEndOf="@+id/btn_materi_mekanisme"
+        app:layout_constraintStart_toStartOf="@+id/btn_materi_mekanisme"
+        app:layout_constraintTop_toTopOf="@+id/btn_materi_volume" />
+
+
+    <ImageView
+        android:id="@+id/btn_gangguan_kanker"
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/btn_gangguan5"
+        app:layout_constraintEnd_toEndOf="@+id/btn_materi_volume"
+        app:layout_constraintStart_toStartOf="@+id/btn_materi_volume"
+        app:layout_constraintTop_toBottomOf="@+id/btn_materi_volume" />
+
+
 
     <ImageView
         android:id="@+id/imgBtn_sound_off"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
         android:src="@drawable/sound_off"
-        app:layout_constraintBottom_toTopOf="@+id/btnNextPageGangguan"
-        app:layout_constraintStart_toEndOf="@+id/btnNextPageGangguan" />
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/imgBtn_sound"
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
         android:src="@drawable/sound_on"
-        app:layout_constraintBottom_toTopOf="@+id/btnNextPageGangguan"
-        app:layout_constraintStart_toEndOf="@+id/btnNextPageGangguan" />
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

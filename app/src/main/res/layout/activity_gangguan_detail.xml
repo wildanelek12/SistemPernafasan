@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SistemPernapasanActivity"
-    android:background="@drawable/bg2">
-
-
+    tools:context=".GangguanDetailActivity"
+    android:background="@drawable/bg1">
 
     <ImageView
         android:id="@+id/btnBackSistemPernapasan"
@@ -33,7 +31,7 @@
             android:id="@+id/textView"
             android:layout_width="@dimen/_475sdp"
             android:layout_height="@dimen/_22sdp"
-            android:src="@drawable/jdl_sistempernapasan"
+            android:src="@drawable/jdl_gangguan"
             app:layout_constraintBottom_toTopOf="@+id/imageView7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,6 +51,7 @@
                 android:id="@+id/imgGif"
                 android:layout_width="@dimen/_175sdp"
                 android:layout_height="match_parent"
+                android:src="@drawable/img_influenza"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -70,9 +69,9 @@
             app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
 
             <ImageView
-                android:layout_width="@dimen/_285sdp"
-                android:layout_height="@dimen/_190sdp"
-                android:src="@drawable/card_sistem_pernapasan"
+                android:layout_width="@dimen/_290sdp"
+                android:layout_height="@dimen/_230sdp"
+                android:src="@drawable/card_influenza"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

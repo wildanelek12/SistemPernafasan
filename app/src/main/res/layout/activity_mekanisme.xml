@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MekanismeActivity"
-    android:background="@drawable/frame_tes">
+    android:background="@drawable/bg3">
 
     <ImageView
         android:id="@+id/btnBackMekanisme"
@@ -27,17 +27,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <ImageView
             android:id="@+id/txtJudulMekanismeFix"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/comforta_bold"
-            android:text="Mekanisme Pernapasan"
-            android:textSize="@dimen/_18ssp"
-            android:textColor="#2d2d2d"
+            android:layout_width="@dimen/_475sdp"
+            android:layout_height="@dimen/_22sdp"
+            android:src="@drawable/jdl_mekanisme"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
 
 
         <TextView
@@ -45,8 +43,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/comforta_bold"
-            android:layout_marginTop="@dimen/_15sdp"
-            android:text="Pernapasan yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Perhatikan percobaan berikut!"
             android:textColor="#2d2d2d"
             android:textSize="@dimen/_12ssp"
             app:layout_constraintTop_toBottomOf="@+id/txtJudulMekanismeFix" />
@@ -55,15 +53,15 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout3"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/_130sdp"
-            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_height="@dimen/_220sdp"
+            android:layout_marginTop="@dimen/_10sdp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtJudulMekanisme">
 
 
             <ImageView
                 android:id="@+id/imgMekanismePernapasan"
-                android:layout_width="@dimen/_175sdp"
+                android:layout_width="@dimen/_300sdp"
                 android:layout_height="match_parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -76,7 +74,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="@dimen/_300sdp"
+            android:layout_width="@dimen/_175sdp"
             android:layout_height="@dimen/_130sdp"
             app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
@@ -86,74 +84,38 @@
                 android:id="@+id/txtPenjelasanMekanisme"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="aksjdhakjsdhkajasdasdasdasddsh"
-                android:padding="@dimen/_20sdp"
+                android:text="Ket."
                 android:textColor="#2d2d2d"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginLeft="@dimen/_20sdp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                android:id="@+id/txtPenjelasanMekanisme2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Balon Kuning = Paru-paru"
+                android:textColor="#2d2d2d"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="@+id/txtPenjelasanMekanisme"
+                app:layout_constraintTop_toBottomOf="@+id/txtPenjelasanMekanisme" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="@dimen/_400sdp"
+            <TextView
+            android:id="@+id/txtPenjelasanMekanisme3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+            android:text="Balon Ungu = Diafragma"
+            android:textColor="#2d2d2d"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="@+id/txtPenjelasanMekanisme2"
+            app:layout_constraintTop_toBottomOf="@+id/txtPenjelasanMekanisme2" />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnInspirasi"
-                android:layout_width="@dimen/_125sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_5sdp"
-                android:layout_marginLeft="@dimen/_50sdp"
-                android:background="@drawable/border_organ"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
 
-                <TextView
-                    android:id="@+id/txtInspirasi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/comforta_bold"
-                    android:text="Proses Inspirasi"
-                    android:textColor="#2d2d2d"
-                    android:textSize="@dimen/_14ssp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/btnEkspirasi"
-                android:layout_width="@dimen/_125sdp"
-                android:layout_height="@dimen/_30sdp"
-                android:layout_marginRight="@dimen/_50sdp"
-                android:background="@drawable/border_organ"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/btnInspirasi">
-
-                <TextView
-                    android:id="@+id/txtEkspirasi"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/comforta_bold"
-                    android:text="Proses Ekspirasi"
-                    android:textColor="#2d2d2d"
-                    android:textSize="@dimen/_14ssp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
